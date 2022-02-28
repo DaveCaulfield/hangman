@@ -6,5 +6,13 @@ import random
 
 test_list = ["avenue", "awkward", "diagram"]
 
-random_word = random.choice(test_list)
+def generate_random_word():
+    """
+    Generate a random word
+    """
+    return random.choice(test_list)
+    
+
+random_word = generate_random_word()
 print(random_word)
+
