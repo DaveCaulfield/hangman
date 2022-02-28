@@ -16,9 +16,32 @@ def player_guess():
     """
     Generate a random word
     """
-    return input("Pick a letter:").lower()
+    player_guess = input("Pick a letter:").lower()
+    
+
+    try:
+        if len(player_guess) != 1:
+            raise ValueError(
+                f"only one letter allowed. you entered {len(player_guess)} letters {player_guess}"
+            )
+        elif not player_guess.isalpha():
+             raise ValueError(
+                f"only letters allowed. you entered {player_guess}"
+            )
+        # add elif when user alread
+
+
+    except ValueError as e:
+        print(f"invalid data - {e}")
+
+        
+
 
     
+
+
+
+        
 def game_loop(): 
     random_word = generate_random_word()
     print(random_word)
