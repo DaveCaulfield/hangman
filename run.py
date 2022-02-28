@@ -7,7 +7,6 @@ import random
 test_list = ["avenue", "awkward", "diagram"]
 
 
-
 def generate_random_word():
     """
     Generate a random word
@@ -16,10 +15,45 @@ def generate_random_word():
     return random_word
 
 
-def player_guess():
-    """
-    Generate a random word
-    """
+# def player_guess():
+#     """
+#     Generate a random word
+#     """
+#     player_guess = input("Pick a letter:").lower()
+
+#     try:
+#         if len(player_guess) != 1:
+#             raise ValueError(
+#                 f"only one letter allowed. you entered {len(player_guess)} letters {player_guess}"
+#             )
+#         elif not player_guess.isalpha():
+#             raise ValueError(
+#                 f"only letters allowed. you entered {player_guess}"
+#             )
+#         # add elif when user already
+
+#     except ValueError as e:
+#         print(f"invalid data - {e}")
+
+#     return player_guess
+
+
+
+
+
+# the game loop
+random_word = generate_random_word()  # call the random word generator
+print(f"for testing  - - random word is : {random_word.upper()}")
+list_blanks = []
+for i in range(len(random_word)):
+    list_blanks += "_"
+print(list_blanks)
+
+
+
+game_over = False
+while not game_over:
+    
     player_guess = input("Pick a letter:").lower()
 
     try:
@@ -35,30 +69,16 @@ def player_guess():
 
     except ValueError as e:
         print(f"invalid data - {e}")
+    #display any correct letter guesses
+    for i in range(len(random_word)):
+        letter = random_word[i]
 
-    return player_guess
+        if letter == player_guess:
+            print(f"{player_guess.upper()} is a letter in the word")
+            list_blanks[i] = letter.upper()
+    print(list_blanks)
 
-
-
-# the game loop
-random_word = generate_random_word() # call the random word generator
-print(f"for testing  - - random word is : {random_word.upper()}")
-list_blanks =[]
-for i in range(len(random_word)):
-    list_blanks += "_"
-print(list_blanks)
-
-player_guess = player_guess() #call the player guess function
-print(player_guess)
-
-#display any correct letter guesses
-for i in range(len(random_word)):
-    letter = random_word[i]
-
-    if letter == player_guess:
-        print(f"{player_guess.upper()} is a letter in the word")
-        list_blanks[i] = letter.upper()
-        print(list_blanks)
-
-
+    if "_" not in list_blanks:
+        game_over = True
+        print("You win.")
 
