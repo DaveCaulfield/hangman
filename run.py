@@ -31,7 +31,7 @@ def player_guess():
             raise ValueError(
                 f"only letters allowed. you entered {player_guess}"
             )
-        # add elif when user alread
+        # add elif when user already
 
     except ValueError as e:
         print(f"invalid data - {e}")
@@ -39,24 +39,26 @@ def player_guess():
     return player_guess
 
 
-random_word = generate_random_word()
-print(random_word)
+
+# the game loop
+random_word = generate_random_word() # call the random word generator
+print(f"for testing  - - random word is : {random_word.upper()}")
 list_blanks =[]
 for i in range(len(random_word)):
     list_blanks += "_"
 print(list_blanks)
 
-player_guess = player_guess()
+player_guess = player_guess() #call the player guess function
 print(player_guess)
 
+#display any correct letter guesses
 for i in range(len(random_word)):
     letter = random_word[i]
 
     if letter == player_guess:
-        print("letter is in the word")
-    else:
-        print("letter not in word")
-
+        print(f"{player_guess.upper()} is a letter in the word")
+        list_blanks[i] = letter.upper()
+        print(list_blanks)
 
 
 
