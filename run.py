@@ -12,7 +12,16 @@ def generate_random_word():
     """
     return random.choice(test_list)
     
-
+  
 random_word = generate_random_word()
 print(random_word)
+display =[]
+for i in range(len(random_word)):
+    display += "_"
+print(display)
 
+
+def player_guess():
+    return input("Pick a letter:").lower()
+
+guess = player_guess()
