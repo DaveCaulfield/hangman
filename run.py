@@ -34,16 +34,14 @@ for i in range(len(random_word)):
     list_blanks += "_"
 print(f"You have {lives} lives\n")
 print(f"{str(' '.join(list_blanks)).upper()}\n")  # join list blanks for cleaner user experience
-
+  
 
 
 # the game loop
 while not game_over:
     
     player_guess = input("Pick a letter:").lower()
-
-    if player_guess in list_blanks:
-        print(f"You already guessed {player_guess}")
+        
 
     try:  
         if len(player_guess) != 1:
@@ -54,8 +52,11 @@ while not game_over:
             raise ValueError(
                 f"only letters allowed. you entered {player_guess}"
             )
-        
-
+        elif player_guess in list_blanks:
+            raise ValueError(
+            print(f"You already guessed {player_guess}")
+            )
+            
     except ValueError as e:
         print(f"invalid data - {e}")
     #display any correct letter guesses
@@ -77,7 +78,7 @@ while not game_over:
 
 
     if player_guess not in random_word:
-        print(f"\n{player_guess} is not a letter in the word - you lose a life")
+        print(f"\n{player_guess.upper()} is not a letter in the word - you lose a life")
         lives -= 1
         print(hangman_pics[lives])
         print(f"You have {lives} lives\n")
