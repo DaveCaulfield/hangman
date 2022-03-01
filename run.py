@@ -9,6 +9,17 @@ lives = 6
 game_over = False
 list_blanks = []
 
+# print(hangman_graphic)
+print("      WELCOME TO THE HANGMAN WORD GAME\n")
+print("     Guess the letters in the word to win\n")
+
+print(hangman_pics[6])
+
+
+
+
+
+
 def generate_random_word():
     """
     Generate a random word
@@ -62,4 +73,7 @@ while not game_over:
     if "_" not in list_blanks:
         game_over = True
         print("You win.")
+
+
+
 
