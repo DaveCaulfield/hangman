@@ -3,13 +3,15 @@
 # check user input is valid
 # check if user guessed letter is in the random word
 import random
+from ascii_art import hangman_pics
+from ascii_art import hangman_graphic
 
 test_list = ["avenue", "awkward", "diagram"]
 lives = 6
 game_over = False
 list_blanks = []
 
-# print(hangman_graphic)
+print(hangman_graphic)
 print("      WELCOME TO THE HANGMAN WORD GAME\n")
 print("     Guess the letters in the word to win\n")
 
