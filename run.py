@@ -42,7 +42,10 @@ while not game_over:
     
     player_guess = input("Pick a letter:").lower()
 
-    try:
+    if player_guess in list_blanks:
+        print(f"You already guessed {player_guess}")
+
+    try:  
         if len(player_guess) != 1:
             raise ValueError(
                 f"only one letter allowed. you entered {len(player_guess)} letters {player_guess}"
@@ -51,7 +54,7 @@ while not game_over:
             raise ValueError(
                 f"only letters allowed. you entered {player_guess}"
             )
-        # add elif when user already
+        
 
     except ValueError as e:
         print(f"invalid data - {e}")
