@@ -64,6 +64,7 @@ while not game_over:
             
 
     except ValueError as e:
+        
         print(f"warning {e}")
     #display any correct letter guesses
     for i in range(len(random_word)):
@@ -85,10 +86,13 @@ while not game_over:
     if player_guess.isalpha() and player_guess not in random_word:
         print(f"\n{player_guess.upper()} is not a letter in the word - you lose a life")
         lives -= 1
-        print(hangman_pics[lives])
-        print(f"You have {lives} lives\n")
+        print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}\n")  #combine line and roll out to other parts
+        print("      WELCOME TO THE HANGMAN WORD GAME\n")  #combine line and roll out to other parts
+        print(hangman_pics[lives])  #combine line and roll out to other parts
+        print(f"You have {lives} lives\n")  #combine line and roll out to other parts
         list_blanks[i] = letter
-        print(f"{str(' '.join(list_blanks)).upper()}\n")
+        print(f"{Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n") 
+       
         if lives == 0:
             print(f"\nYou have no lives left")
             print(f"\nThe word was {random_word.upper()}\n")
