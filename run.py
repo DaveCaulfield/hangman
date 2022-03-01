@@ -38,7 +38,7 @@ random_word = generate_random_word()  # call the random word generator
 for i in range(len(random_word)):
     list_blanks += "_"
 print(f"Lives: {lives}\n")
-print(f"{str(' '.join(list_blanks)).upper()}\n")  # join list blanks for cleaner user experience
+print(f"{Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n")  # join list blanks for cleaner user experience
 print(f"TESTWORD IS -->> {random_word.upper()}") 
 
 
@@ -74,12 +74,13 @@ while not game_over:
         letter = random_word[i]
 
         if letter == player_guess:
-            
-            print(f"{player_guess.upper()} is a letter in the word")
-            print(hangman_pics[lives])
-            print(f"You have {lives} lives\n")
+            print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}\n")  #combine line and roll out to other parts
+            print("      WELCOME TO THE HANGMAN WORD GAME\n")  #combine line and roll out to other parts
+            print(hangman_pics[lives])  #combine line and roll out to other parts
+            print(f"You have {lives} lives\n")  #combine line and roll out to other parts
             list_blanks[i] = letter
-            print(f"{str(' '.join(list_blanks)).upper()}\n")
+            print(f"{Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n") 
+            print(f"{player_guess.upper()} is a letter in the word\n")
 
     if player_guess.isalpha() and player_guess not in random_word:
         print(f"\n{player_guess.upper()} is not a letter in the word - you lose a life")
