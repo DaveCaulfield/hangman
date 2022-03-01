@@ -84,7 +84,7 @@ while not game_over:
             print(f"{player_guess.upper()} is a letter in the word\n")
 
     if player_guess.isalpha() and player_guess not in random_word:
-        print(f"\n{player_guess.upper()} is not a letter in the word - you lose a life")
+        
         lives -= 1
         print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}\n")  #combine line and roll out to other parts
         print("      WELCOME TO THE HANGMAN WORD GAME\n")  #combine line and roll out to other parts
@@ -92,6 +92,7 @@ while not game_over:
         print(f"You have {lives} lives\n")  #combine line and roll out to other parts
         list_blanks[i] = letter
         print(f"{Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n") 
+        print(f"\n{player_guess.upper()} is not a letter in the word - you lose a life\n")
        
         if lives == 0:
             print(f"\nYou have no lives left")
