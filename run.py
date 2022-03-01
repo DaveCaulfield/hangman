@@ -19,9 +19,6 @@ print(hangman_pics[6])
 
 
 
-
-
-
 def generate_random_word():
     """
     Generate a random word
@@ -35,7 +32,9 @@ print(f"for testing  - - random word is : {random_word.upper()}")
 
 for i in range(len(random_word)):
     list_blanks += "_"
-print(list_blanks)
+print(f"You have {lives} lives\n")
+print(f"{str(' '.join(list_blanks)).upper()}\n")  # join list blanks for cleaner user experience
+
 
 
 # the game loop
@@ -60,17 +59,32 @@ while not game_over:
     for i in range(len(random_word)):
         letter = random_word[i]
 
+
+    for i in range(len(random_word)):
+        letter = random_word[i]
+
         if letter == player_guess:
+            
             print(f"{player_guess.upper()} is a letter in the word")
-            list_blanks[i] = letter.upper()
-    print(list_blanks)
+            print(hangman_pics[lives])
+            print(f"You have {lives} lives\n")
+            list_blanks[i] = letter
+            print(f"{str(' '.join(list_blanks)).upper()}\n")
+
+
 
     if player_guess not in random_word:
-        print(f"\nThats not a letter in the word - you lose a life")
+        print(f"\n{player_guess} is not a letter in the word - you lose a life")
         lives -= 1
+        print(hangman_pics[lives])
+        print(f"You have {lives} lives\n")
+        list_blanks[i] = letter
+        print(f"{str(' '.join(list_blanks)).upper()}\n")
         if lives == 0:
             print(f"\nYou have no lives left")
-        print(f"{lives} lives left")
+            game_over = True
+            print("Game Over")
+        
 
     if "_" not in list_blanks:
         game_over = True
