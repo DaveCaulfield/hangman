@@ -6,19 +6,24 @@ import random
 import os 
 from ascii_art import hangman_pics
 from ascii_art import hangman_graphic
+from colorama import Fore
+from colorama import Style
+
 
 test_list = ["avenue", "awkward", "diagram"]
 lives = 6
 game_over = False
 list_blanks = []
 
-print(hangman_graphic)
-print("      WELCOME TO THE HANGMAN WORD GAME\n")
-print("     Guess the letters in the word to win\n")
 
-print(hangman_pics[6])
+def landing_page():
+    print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}\n")
+    print("      WELCOME TO THE HANGMAN WORD GAME\n")
+    print("     Guess the letters in the word to win\n")
 
+    print(hangman_pics[6])
 
+landing_page()
 
 def generate_random_word():
     """
@@ -26,7 +31,6 @@ def generate_random_word():
     """
     random_word = random.choice(test_list)
     return random_word
-
 
 random_word = generate_random_word()  # call the random word generator
 
@@ -77,11 +81,6 @@ while not game_over:
             list_blanks[i] = letter
             print(f"{str(' '.join(list_blanks)).upper()}\n")
 
-
-            
-
-
-
     if player_guess.isalpha() and player_guess not in random_word:
         print(f"\n{player_guess.upper()} is not a letter in the word - you lose a life")
         lives -= 1
@@ -91,6 +90,7 @@ while not game_over:
         print(f"{str(' '.join(list_blanks)).upper()}\n")
         if lives == 0:
             print(f"\nYou have no lives left")
+            print(f"\nThe word was {random_word.upper()}\n")
             game_over = True
             print("Game Over")
         
