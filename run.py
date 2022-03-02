@@ -54,19 +54,38 @@ while not game_over:
 
     try:
         if len(player_guess) != 1:
+            print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}\n")  #combine line and roll out to other parts
+            print("      WELCOME TO THE HANGMAN WORD GAME\n")  #combine line and roll out to other parts
+            print(hangman_pics[lives])  #combine line and roll out to other parts
+            print(f"You have {lives} lives\n")  #combine line and roll out to other parts
+            print(f"{Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n")
             raise ValueError(
                 f"only one letter allowed. you entered {len(player_guess)} characters {player_guess}"
             )
         elif not player_guess.isalpha():
+            print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}\n")  #combine line and roll out to other parts
+            print("      WELCOME TO THE HANGMAN WORD GAME\n")  #combine line and roll out to other parts
+            print(hangman_pics[lives])  #combine line and roll out to other parts
+            print(f"You have {lives} lives\n")  #combine line and roll out to other parts
+            print(f"{Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n")
             raise ValueError(
                 f"only letters allowed. you entered {player_guess}"
             )
+        elif player_guess not in random_word:
+            lives -= 1
+            print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}\n")  #combine line and roll out to other parts
+            print("      WELCOME TO THE HANGMAN WORD GAME\n")  #combine line and roll out to other parts
+            print(hangman_pics[lives])  #combine line and roll out to other parts
+            print(f"You have {lives} lives\n")  #combine line and roll out to other parts
+            print(f"{Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n") 
+            print(f"{player_guess.upper()} is not a letter in the word - you lose a life\n")
+
         elif player_guess in list_blanks:
             print(f"You already guessed {player_guess}")
 
-
     except ValueError as e:
         print(f"warning {e}\n")
+
     #display any correct letter guesses
     for i in range(len(random_word)):
         letter = random_word[i]
@@ -80,22 +99,21 @@ while not game_over:
             print(f"{Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n") 
             print(f"{player_guess.upper()} is a letter in the word\n")
 
-    if player_guess.isalpha() and player_guess not in random_word:
+    # if player_guess.isalpha() and player_guess not in random_word:
         
-        lives -= 1
-        print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}\n")  #combine line and roll out to other parts
-        print("      WELCOME TO THE HANGMAN WORD GAME\n")  #combine line and roll out to other parts
-        print(hangman_pics[lives])  #combine line and roll out to other parts
-        print(f"You have {lives} lives\n")  #combine line and roll out to other parts
-        # list_blanks[i] = letter . . .this line caused a bug, least letter was being displayed
-        print(f"{Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n") 
-        print(f"{player_guess.upper()} is not a letter in the word - you lose a life\n")
+    #     lives -= 1
+    #     print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}\n")  #combine line and roll out to other parts
+    #     print("      WELCOME TO THE HANGMAN WORD GAME\n")  #combine line and roll out to other parts
+    #     print(hangman_pics[lives])  #combine line and roll out to other parts
+    #     print(f"You have {lives} lives\n")  #combine line and roll out to other parts
+    #     print(f"{Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n") 
+    #     print(f"{player_guess.upper()} is not a letter in the word - you lose a life\n")
 
-        if lives == 0:
-            print(f"\nYou have no lives left")
-            print(f"\nThe word was {random_word.upper()}\n")
-            game_over = True
-            print("Game Over")
+    if lives == 0:
+        print(f"\nYou have no lives left")
+        print(f"\nThe word was {random_word.upper()}\n")
+        game_over = True
+        print("Game Over")
 
 
     if "_" not in list_blanks:
