@@ -56,7 +56,7 @@ while not game_over:
             print(f"You have {lives} lives\n")  #combine line and roll out to other parts
             print(f"{Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n")
             raise ValueError(
-                f"only one letter allowed. you entered {len(player_guess)} characters {player_guess}"
+                f"only one letter allowed. you entered {len(player_guess)} characters '{player_guess}'"
             )
         elif not player_guess.isalpha():
             print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}\n")  #combine line and roll out to other parts
@@ -65,7 +65,7 @@ while not game_over:
             print(f"You have {lives} lives\n")  #combine line and roll out to other parts
             print(f"{Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n")
             raise ValueError(
-                f"only letters allowed. you entered {player_guess}"
+                f"only letters allowed. you entered '{player_guess}'"
             )
         elif player_guess not in random_word:
             lives -= 1
@@ -80,7 +80,7 @@ while not game_over:
             print(f"You already guessed {player_guess}")
     #Customer error message
     except ValueError as e:
-        print(f"warning {e}\n")
+        print(f"Caution {e}\n")
 
     #display any correct letter guesses
     for i in range(len(random_word)):
