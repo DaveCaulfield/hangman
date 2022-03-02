@@ -63,14 +63,9 @@ while not game_over:
             print(f"You already guessed {player_guess}")
             
 
-    except ValueError as e:
-        
-        print(f"warning {e}")
+    except ValueError as e: 
+        print(f"warning {e}\n")
     #display any correct letter guesses
-    for i in range(len(random_word)):
-        letter = random_word[i]
-
-
     for i in range(len(random_word)):
         letter = random_word[i]
 
@@ -92,7 +87,7 @@ while not game_over:
         print(f"You have {lives} lives\n")  #combine line and roll out to other parts
         list_blanks[i] = letter
         print(f"{Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n") 
-        print(f"\n{player_guess.upper()} is not a letter in the word - you lose a life\n")
+        print(f"{player_guess.upper()} is not a letter in the word - you lose a life\n")
        
         if lives == 0:
             print(f"\nYou have no lives left")
@@ -103,7 +98,7 @@ while not game_over:
 
     if "_" not in list_blanks:
         game_over = True
-        print("You win.")
+        print(f"\nCongratulations! the word is {random_word.upper()} - {Fore.GREEN}You win!!{Style.RESET_ALL}\n\n")
 
 
 
