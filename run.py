@@ -76,12 +76,11 @@ while not game_over:
             )
         # guess is not a letter
         elif not player_guess.isalpha():
-            game_display_template()
-            # print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}\n")  #combine line and roll out to other parts
-            # print("      WELCOME TO THE HANGMAN WORD GAME\n")  #combine line and roll out to other parts
-            # print(hangman_pics[lives])  #combine line and roll out to other parts
-            # print(f"You have {lives} lives\n")  #combine line and roll out to other parts
-            # print(f"{Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n")
+            print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}\n")  #combine line and roll out to other parts
+            print("      WELCOME TO THE HANGMAN WORD GAME\n")  #combine line and roll out to other parts
+            print(hangman_pics[lives])  #combine line and roll out to other parts
+            print(f"You have {lives} lives\n")  #combine line and roll out to other parts
+            print(f"{Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n")
             raise ValueError(
                 f"only letters allowed. you entered '{player_guess}'"
             )
@@ -91,12 +90,11 @@ while not game_over:
         #deduct life    
         elif player_guess not in random_word:
             lives -= 1
-            game_display_template()
-            # print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}\n")  #combine line and roll out to other parts
-            # print("      WELCOME TO THE HANGMAN WORD GAME\n")  #combine line and roll out to other parts
-            # print(hangman_pics[lives])  #combine line and roll out to other parts
-            # print(f"You have {lives} lives\n")  #combine line and roll out to other parts
-            # print(f"{Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n") 
+            print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}\n")  #combine line and roll out to other parts
+            print("      WELCOME TO THE HANGMAN WORD GAME\n")  #combine line and roll out to other parts
+            print(hangman_pics[lives])  #combine line and roll out to other parts
+            print(f"You have {lives} lives\n")  #combine line and roll out to other parts
+            print(f"{Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n") 
             print(f"{player_guess.upper()} is not a letter in the word - you lose a life\n")
         
     #Customer error message
