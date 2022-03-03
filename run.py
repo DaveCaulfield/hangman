@@ -53,6 +53,7 @@ def game_display_template():
     print("      WELCOME TO THE HANGMAN WORD GAME\n")  #combine line and roll out to other parts
     print(hangman_pics[lives])  #combine line and roll out to other parts
     print(f"You have {lives} lives\n")  #combine line and roll out to other parts
+    list_blanks[i] = letter
     print(f"{Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n") 
 
 
