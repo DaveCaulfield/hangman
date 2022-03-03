@@ -8,7 +8,7 @@ from colorama import Style
 from words import wordlist
 
 # variables
-test_list = ["avenue", "awkward", "diagram"]
+
 lives = 6
 game_over = False
 list_blanks = []
@@ -36,7 +36,7 @@ def generate_random_word():
     """
     Generate a random word
     """
-    random_word = random.choice(test_list)
+    random_word = random.choice(wordlist)
     return random_word
 
 random_word = generate_random_word()  # call the random word generator
