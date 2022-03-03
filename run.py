@@ -5,6 +5,7 @@ from ascii_art import hangman_pics
 from ascii_art import hangman_graphic
 from colorama import Fore
 from colorama import Style
+from words import wordlist
 
 # variables
 test_list = ["avenue", "awkward", "diagram"]
@@ -14,9 +15,17 @@ list_blanks = []
 
 # landing page graphic/display messsage
 def landing_page():
+    """
+    Load 
+    """
     print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}\n")
-    print("      WELCOME TO THE HANGMAN WORD GAME\n")
-    print("     Guess the letters in the word to win\n")
+    print("        WELCOME TO THE HANGMAN WORD GAME\n")
+    print("     Guess all the letters in the word to win.\n")
+
+    print("\nHOW TO PLAY:")
+    print("Enter one letter at a time.")
+    print("If your guess is correct the letter will be displayed.")
+    print("If your guess is wrong you lose a life.")
 
     print(hangman_pics[6])
 
