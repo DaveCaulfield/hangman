@@ -22,10 +22,10 @@ def landing_page():
     print("        WELCOME TO THE HANGMAN WORD GAME\n")
     print("     Guess all the letters in the word to win.\n")
 
-    print("\nHOW TO PLAY:")
-    print("Enter one letter at a time.")
-    print("If your guess is correct the letter will be displayed.")
-    print("If your guess is wrong you lose a life.")
+    print("\nTo beat the Hangman:")
+    print("- Enter one letter at a time.")
+    print("- If your guess is correct the letter will be displayed.")
+    print("- If your guess is wrong you lose a life.")
 
     print(hangman_pics[6])
 
@@ -44,7 +44,7 @@ random_word = generate_random_word()  # call the random word generator
 # Display list of blank letters to be filled
 for i in range(len(random_word)):
     list_blanks += "_"
-print(f"Lives: {lives}\n")
+print(f"You have {lives} lives\n")
 print(f"{Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n")  # join list blanks for cleaner user experience
 print(f"TESTWORD IS -->> {random_word.upper()}")
 
