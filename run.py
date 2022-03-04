@@ -57,6 +57,10 @@ def gamearea_display():
     # print("      WELCOME TO THE HANGMAN WORD GAME\n")  #combine line and roll out to other parts
     print(hangman_pics[lives])  #combine line and roll out to other parts
     print(f"You have {lives} lives\n")  #combine line and roll out to other parts
+    
+    #if guess same letter
+    if player_guess in list_blanks:
+        print(f"You already guessed the letter {player_guess.upper()}\n")
   
 
 # Game on loop
@@ -79,11 +83,9 @@ while not game_over:
             gamearea_display()
             print(f"{Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n")
             raise ValueError(
-                f"only letters allowed. you entered '{player_guess}'"
+                f"only letters allowed, you entered '{player_guess}'"
             )
-            #if guess same letter
-        elif player_guess in list_blanks:
-            print(f"You already guessed {player_guess}")
+       
         #deduct life    
         elif player_guess not in random_word:
             lives -= 1
