@@ -56,7 +56,7 @@ def gamearea_display():
     os.system('clear')
     print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}")  #combine line and roll out to other parts
     # print("      WELCOME TO THE HANGMAN WORD GAME\n")  #combine line and roll out to other parts
-    print(f"   hangman_pics[lives]")  #combine line and roll out to other parts
+    print(hangman_pics[lives])  #combine line and roll out to other parts
     print(f" You have {lives} lives\n")  #combine line and roll out to other parts
     
     #if guess same letter
