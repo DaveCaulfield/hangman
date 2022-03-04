@@ -61,7 +61,7 @@ def gamearea_display():
     
     #if guess same letter
     if player_guess in list_blanks:
-        print(f"You already guessed the letter {player_guess.upper()}\n")
+        print(f"{Fore.YELLOW}You already guessed the letter {player_guess.upper()}{Style.RESET_ALL}\n")
   
 
 # Game on loop
@@ -77,14 +77,14 @@ while not game_over:
             gamearea_display()
             print(f"{Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n")
             raise ValueError(
-                f"only one letter allowed. you entered {len(player_guess)} characters '{player_guess}'"
+                f"{Fore.YELLOW}only one letter allowed, you entered {len(player_guess)} characters '{player_guess}'{Style.RESET_ALL}"
             )
         # guess is not a letter
         elif not player_guess.isalpha():
             gamearea_display()
             print(f"{Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n")
             raise ValueError(
-                f"only letters allowed, you entered '{player_guess}'"
+                f"{Fore.YELLOW}only letters allowed, you entered '{player_guess}{Style.RESET_ALL}'"
             )
        
         #deduct life    
@@ -92,11 +92,11 @@ while not game_over:
             lives -= 1
             gamearea_display()
             print(f"{Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n") 
-            print(f"{player_guess.upper()} is not a letter in the word - you lose a life\n")
+            print(f"{Fore.YELLOW}{player_guess.upper()} is not a letter in the word - you lose a life{Style.RESET_ALL}\n")
         
     #Customer error message
     except ValueError as e:
-        print(f"Caution {e}\n")
+        print(f"{Fore.YELLOW}Caution: {e}{Style.RESET_ALL}\n")
 
     #display any correct letter guesses
     for i in range(len(random_word)):
@@ -113,7 +113,7 @@ while not game_over:
         print(f"\nYou have no lives left")
         print(f"\nThe word was {random_word.upper()}\n")
         game_over = True
-        print("Game Over")
+        print(f"{Fore.RED}Game Over{Style.RESET_ALL}")
 
     #Game over condition
     if "_" not in list_blanks:
