@@ -57,6 +57,16 @@ def game_display_template():
     print(f"{Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n") 
 
 
+def gamearea_display():
+    """
+    Display hangman logo pics template
+    """
+    print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}\n")  #combine line and roll out to other parts
+    print("      WELCOME TO THE HANGMAN WORD GAME\n")  #combine line and roll out to other parts
+    print(hangman_pics[lives])  #combine line and roll out to other parts
+    print(f"You have {lives} lives\n")  #combine line and roll out to other parts
+  
+
 # Game on loop
 while not game_over:
 
@@ -107,10 +117,11 @@ while not game_over:
         letter = random_word[i]
         #Correct guesses
         if letter == player_guess:
-            print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}\n")  #combine line and roll out to other parts
-            print("      WELCOME TO THE HANGMAN WORD GAME\n")  #combine line and roll out to other parts
-            print(hangman_pics[lives])  #combine line and roll out to other parts
-            print(f"You have {lives} lives\n")  #combine line and roll out to other parts
+            gamearea_display()
+            # print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}\n")  #combine line and roll out to other parts
+            # print("      WELCOME TO THE HANGMAN WORD GAME\n")  #combine line and roll out to other parts
+            # print(hangman_pics[lives])  #combine line and roll out to other parts
+            # print(f"You have {lives} lives\n")  #combine line and roll out to other parts
             list_blanks[i] = letter
             print(f"{Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n") 
             print(f"{player_guess.upper()} is a letter in the word\n")
