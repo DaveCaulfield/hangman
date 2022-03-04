@@ -70,7 +70,7 @@ def gamearea_display():
 # Game on loop
 while not game_over:
 
-    player_guess = input("Guess a letter:").lower()
+    player_guess = input("Guess a letter:\n").lower()
 
     os.system('clear')
 
