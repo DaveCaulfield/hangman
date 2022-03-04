@@ -48,14 +48,6 @@ print(f"You have {lives} lives\n")
 print(f"{Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n")  # join list blanks for cleaner user experience
 print(f"TESTWORD IS -->> {random_word.upper()}")
 
-# def game_display_template():
-#     print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}\n")  #combine line and roll out to other parts
-#     # print("      WELCOME TO THE HANGMAN WORD GAME\n")  #combine line and roll out to other parts
-#     print(hangman_pics[lives])  #combine line and roll out to other parts
-#     print(f"You have {lives} lives\n")  #combine line and roll out to other parts
-#     list_blanks[i] = letter
-#     print(f"{Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n") 
-
 
 def gamearea_display():
     """
