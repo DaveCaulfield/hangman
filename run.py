@@ -67,7 +67,7 @@ print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}")
 print(hangman_pics[lives])
 print(f"                 {Fore.GREEN}{lives} lives\n")
 print(f"              {Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n")  # join list blanks for cleaner user experience
-print(f"TESTWORD IS -->> {random_word.upper()}")
+# print(f"TESTWORD IS -->> {random_word.upper()}")
 
 
 def gamearea_display():
