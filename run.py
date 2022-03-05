@@ -20,17 +20,13 @@ def landing_page():
     Load landing page
     """
     print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}\n")
-    print("         WELCOME TO THE HANGMAN WORD GAME\n")
-    print("     Guess all the letters in the word to win.\n")
+    print("           WELCOME TO THE HANGMAN WORD GAME\n")
+    print("       Guess all the letters in the word to win.\n")
 
     print("\n You get 6 lives to beat the Hangman.")
     print(" You enter one letter at a time.")
     print(" You guess correct and the letter will be displayed.")
     print(" You guess wrong and you lose a life.")
-
-    # print(hangman_pics[6])
-
-
 
 
 # Generate random word
