@@ -20,7 +20,7 @@ def landing_page():
     Load landing page
     """
     print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}\n")
-    print("        WELCOME TO THE HANGMAN WORD GAME\n")
+    print("         WELCOME TO THE HANGMAN WORD GAME\n")
     print("     Guess all the letters in the word to win.\n")
 
     print("\n You get 6 lives to beat the Hangman.")
@@ -38,7 +38,7 @@ def generate_random_word():
     """
     Generate a random word
     """
-    level = input(f"\npress {Fore.CYAN}1 {Style.RESET_ALL}for easier level\npress {Fore.CYAN}2 {Style.RESET_ALL}for harder level\n")
+    level = input(f"\n press {Fore.CYAN}1 {Style.RESET_ALL}for easier level\n press {Fore.CYAN}2 {Style.RESET_ALL}for harder level\n")
     if level == "1":
         os.system('clear')
         random_word = random.choice(wordlist1)
@@ -46,8 +46,10 @@ def generate_random_word():
         os.system('clear')
         random_word = random.choice(wordlist2)
     else:
-        print("please enter a valid choice: '1' or '2'")
+        os.system('clear')
+        landing_page()
         generate_random_word()
+        
    
     return random_word
 
