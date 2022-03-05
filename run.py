@@ -125,7 +125,7 @@ while not game_over:
             gamearea_display()
             list_blanks[i] = letter
             print(f"               {Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n")  # join list blanks for cleaner user experience
-            print(f" {player_guess.upper()} is a letter in the word\n")
+            print(f" {player_guess.upper()} is a letter in the word.\n")
 
     # Game over condition
     if lives == 0:
