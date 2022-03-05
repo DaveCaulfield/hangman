@@ -5,7 +5,7 @@ This is a web application re-creating the word game Hangman. Players try to disc
 [The Hangman Word Game](https://the-hangman-wordgame.herokuapp.com/)
 
 
-![landing page](docs/readme-images/landing-page.png))
+![landing page](docs/readme-images/landing-page.png)
 
 
 # User Experience (UX)
@@ -19,12 +19,12 @@ The Design process for the hangman game started with a flow chart to map out the
 
 
 
-![Flow chart](docs/readme-images/hangman-flow-chart.png))
+![Flow chart](docs/readme-images/hangman-flow-chart.png)
 
 
 # Site Structure
 
-The Hangman game runs as a python console line web application on the Heroku platform.
+The Hangman game runs as a python console line web application hosted on the Heroku cloud application platform.
 
 # Features
 
@@ -68,13 +68,18 @@ The Hangman game runs as a python console line web application on the Heroku pla
 
  ![game play](docs/readme-images/game-on1.png)
 
- ## Game over
+ ## Game over - lose
 
  - If the user runs out of lives before guessing all the correct letters the game is over.
  - A message is returned to the user advising they have no lives left.
  - "Game Over" is displayed in red text.
 
  ![game lose](docs/readme-images/game-over.png)
+
+  ## Game over - win
+  - If the user guesses all the letters in the word they win.
+  - A message is returned to the user advising they have won.
+  - "YOU WIN" is displayed in green text
 
  ![game win](docs/readme-images/game-win.png)
 

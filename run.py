@@ -138,7 +138,7 @@ while not game_over:
     if "_" not in list_blanks:
         game_over = True
         print(f" Congratulations! the word is {random_word.upper()}\n")
-        print(f"                 {Fore.GREEN}YOU WIN!!{Style.RESET_ALL}")
+        print(f"                {Fore.GREEN}YOU WIN!!{Style.RESET_ALL}")
  
 
 
