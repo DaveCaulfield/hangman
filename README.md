@@ -24,4 +24,26 @@ The Design process for the hangman game started with a flow chart to map out the
 
 # Site Structure
 
-The Hangman game has two pages, a landing home page to greet the user and provide instructions and a game page to play the game.
+The Hangman game runs as a python console line web application on the Heroku platform.
+
+# Features
+
+## Hangman banner
+ - The Hangman banner is displayed at the top of the landing page. 
+ - It is an ascii art design in cyan color and welcomes the user. 
+ - It immediately conveys the name of the game and adds to the user experience.
+
+
+![The Hangman banner](docs/readme-images/banner.png)
+
+## instructions
+ - The instructions give clear details explaining how to play the game.
+
+![instructions](docs/readme-images/instructions.png)
+
+## game levels
+ - An option for different game levels is provided to the user.
+
+ ![game levels](docs/readme-images/levels.png)
+
+
