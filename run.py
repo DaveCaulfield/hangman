@@ -24,9 +24,9 @@ def landing_page():
     print("     Guess all the letters in the word to win.\n")
 
     print("\n You get 6 lives to beat the Hangman.")
-    print(" Enter one letter at a time.")
-    print(" If your guess is correct the letter will be displayed.")
-    print(" If your guess is wrong you lose a life.")
+    print(" You enter one letter at a time.")
+    print(" You guess correct and the letter will be displayed.")
+    print(" You guess wrong and you lose a life.")
 
     # print(hangman_pics[6])
 
@@ -38,7 +38,7 @@ def generate_random_word():
     """
     Generate a random word
     """
-    level = input("\npress 1 for easier level\npress 2 for harder level\n")
+    level = input(f"\npress {Fore.CYAN}1 {Style.RESET_ALL}for easier level\npress {Fore.CYAN}2 {Style.RESET_ALL}for harder level\n")
     if level == "1":
         os.system('clear')
         random_word = random.choice(wordlist1)
@@ -46,7 +46,7 @@ def generate_random_word():
         os.system('clear')
         random_word = random.choice(wordlist2)
     else:
-        print("please entera a valid choice: '1' or '2'")
+        print("please enter a valid choice: '1' or '2'")
         generate_random_word()
    
     return random_word
