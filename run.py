@@ -5,7 +5,7 @@ from ascii_art import hangman_pics
 from ascii_art import hangman_graphic
 from colorama import Fore
 from colorama import Style
-from words import wordlist
+from words import wordlist, wordlist1, wordlist2
 
 # variables
 
@@ -28,7 +28,7 @@ def landing_page():
     print(" If your guess is correct the letter will be displayed.")
     print(" If your guess is wrong you lose a life.")
 
-    print(hangman_pics[6])
+    # print(hangman_pics[6])
 
 landing_page()
 
@@ -38,7 +38,17 @@ def generate_random_word():
     """
     Generate a random word
     """
-    random_word = random.choice(wordlist)
+    level = input("\npress 1 for easier level\npress 2 for harder level\n")
+    if level == "1":
+        os.system('clear')
+        random_word = random.choice(wordlist1)
+    elif level == "2":
+        os.system('clear')
+        random_word = random.choice(wordlist2)
+    else:
+        print("please entera a valid choice: '1' or '2'")
+        generate_random_word()
+   
     return random_word
 
 random_word = generate_random_word()  # call the random word generator
@@ -46,6 +56,8 @@ random_word = generate_random_word()  # call the random word generator
 # Display list of blank letters to be filled
 for i in range(len(random_word)):
     list_blanks += "_"
+print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}")
+print(hangman_pics[lives])
 print(f"                 {Fore.GREEN}{lives} lives\n")
 print(f"              {Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n")  # join list blanks for cleaner user experience
 print(f"TESTWORD IS -->> {random_word.upper()}")

@@ -209,3 +209,19 @@ wordlist = ["abruptly",
 "zipper",
 "zodiac",
 "zombie",]
+
+
+wordlist1 = ["abruptly",
+"absurd",
+"abyss",
+"affix",
+"askew",
+"avenue",]
+
+
+wordlist2 = ["zigzag",
+"zigzagging",
+"zilch",
+"zipper",
+"zodiac",
+"zombie",]
