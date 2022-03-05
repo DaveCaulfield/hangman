@@ -33,17 +33,49 @@ The Hangman game runs as a python console line web application on the Heroku pla
  - It is an ascii art design in cyan color and welcomes the user. 
  - It immediately conveys the name of the game and adds to the user experience.
 
-
 ![The Hangman banner](docs/readme-images/banner.png)
 
-## instructions
+## Instructions
  - The instructions give clear details explaining how to play the game.
 
 ![instructions](docs/readme-images/instructions.png)
 
-## game levels
+## Game levels
  - An option for different game levels is provided to the user.
+ - The user can press 1 for an easier level.
+ - The user can press 2 for an harder level.
 
  ![game levels](docs/readme-images/levels.png)
+
+ ## Game page
+ - The game page displays an ascii art feature reprenting the gallows.
+ - This is where the image of a person will be drawn as the game progresses.
+ - The number of lives is displayed in green under the gallows
+ - The blanks/underscores displayed in cyan color represent the letters of the word.
+ - The correct letters guessed will replace the blank underscores as the user guesses them.
+ - The user is prompted to guess a letter providing input to the game.
+
+
+ ![game page](docs/readme-images/game-page.png)
+
+ ## Feedback to the user
+  - Feedback is provided when a user guesses a letter.
+  - When a correct letter is guessed the letter is displayed in the list of blank underscores.
+  - A message is also returned advising that the Letter is in the word
+  - When an incorrect letter is guessed the ascii art image to starts to be drawn.
+  - The number of lives displayed is updtaed with the remaining lives left.
+  - A message is also returned in orange warning text advising that the Letter is not in the word.
+
+ ![game play](docs/readme-images/game-on1.png)
+
+ ## Game over
+
+ - If the user runs out of lives before guessing all the correct letters the game is over.
+ - A message is returned to the user advising they have no lives left.
+ - "Game Over" is displayed in red text.
+
+ ![game lose](docs/readme-images/game-over.png)
+
+ ![game win](docs/readme-images/game-win.png)
 
 
