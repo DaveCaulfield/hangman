@@ -125,6 +125,13 @@ The Hangman game runs as a python console line web application hosted on the Her
 
 [Back to top](#Overview)
 
+# Technologies used
+  - [Python](https://www.python.org/) was used to code the application.
+  - [pep8 Validator](http://pep8online.com/) was used to validate the python3 code.
+  - [Gitpod](https://www.gitpod.io/#get-started) was used to create and edit the applications files.
+  - [Github](https://github.com/) was used to host the code repository.
+  - [Heroku](https://id.heroku.com/login) was used to deploy the application.
+
 # Testing
 
 ## Bugs
@@ -149,6 +156,15 @@ The following steps were taken to deploy the site:
 - Choose "Automatic deploys" or "Manual deploys" to deploy your application.
 
 # credits
+
+## Content
+ - The Hangman banner ascii art came from [ascii.co.uk](https://ascii.co.uk/)
+ - The Hangman ascii images came from [Chris Horton](https://gist.github.com/chrishorton/2624db0a0e82102bef769deb46971a47) github.
+ - The colors used in the application came from [Colorama](https://pypi.org/project/colorama/)
+ - The wordlists came from [hangmanwords](https://www.hangmanwords.com/words) and [randon word generator](https://www.randomlists.com/random-words)
+
+
+## Acknowledgements
 
 The Hangman wordgame was built as my Portfolio 3 Project for the Full Stack Software Developer (e-Commerce) Diploma at the [Code Institute](https://codeinstitute.net/ie/). I would like to thank my cohort facilitator [Kasia Bogucka](https://github.com/bezebee), my mentor [Precious Leige](https://www.linkedin.com/in/precious-ijege-908a00168/), the Code institue Slack community and the Code institute taem for the help and support provided to me throughout this project. 
 
