@@ -34,7 +34,11 @@ def generate_random_word():
     """
     Generate a random word
     """
-    level = input(f"\n press {Fore.CYAN}1 {Style.RESET_ALL}for easier level\n press {Fore.CYAN}2 {Style.RESET_ALL}for harder level\n")
+    print(f"\n press {Fore.CYAN}1 {Style.RESET_ALL}for easier level")
+    print(f" press {Fore.CYAN}2 {Style.RESET_ALL}for harder level")
+
+    level = input(f"\n enter your choice {Fore.CYAN}1 or 2\n")
+    print(f"{Style.RESET_ALL}")
     if level == "1":
         os.system('clear')
         random_word = random.choice(wordlist1)
@@ -67,7 +71,8 @@ print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}")
 print(hangman_pics[lives])
 print(f"                 {Fore.GREEN}{lives} lives\n")
 print(f" {Fore.CYAN}{str(' '.join(list_blanks)).upper()}\n")
-# print(f"TESTWORD IS -->> {random_word.upper()}")
+print(f"{Style.RESET_ALL}")
+print(f"TESTWORD IS -->> {random_word.upper()}")
 
 
 def gamearea_display():
@@ -81,12 +86,14 @@ def gamearea_display():
 
     # if guess same letter
     if player_guess in list_blanks:
-        print(f"{Fore.YELLOW} You already guessed the letter {player_guess.upper()}{Style.RESET_ALL}\n")
+        print(f"{Fore.YELLOW}")
+        print(f" You already guessed letter '{player_guess.upper()}'\n")
+
 
 # Game on loop
 while not game_over:
 
-    player_guess = input(f"{Fore.CYAN} Guess a letter:\n").lower()
+    player_guess = input(" Guess a letter:\n").lower()
 
     os.system('clear')
 
@@ -96,14 +103,15 @@ while not game_over:
             gamearea_display()
             print(f" {Fore.CYAN}{str(' '.join(list_blanks)).upper()}\n")
             raise ValueError(
-                f"only one letter allowed, you entered characters '{player_guess}'"
+                f"only one letter allowed, you entered '{player_guess}'"
             )
         # guess is not a letter
         elif not player_guess.isalpha():
             gamearea_display()
             print(f" {Fore.CYAN}{str(' '.join(list_blanks)).upper()}\n")
+            print(f"{Style.RESET_ALL}")
             raise ValueError(
-                f"{Fore.YELLOW}letter only, you entered '{player_guess}'"
+                f"{Fore.YELLOW}letters only, you entered '{player_guess}'"
             )
 
         # deduct life
@@ -111,7 +119,9 @@ while not game_over:
             lives -= 1
             gamearea_display()
             print(f" {Fore.CYAN}{str(' '.join(list_blanks)).upper()}\n")
-            print(f" {Fore.YELLOW}Not a letter in the word{Style.RESET_ALL}\n")
+            print(f"{Style.RESET_ALL}{Fore.YELLOW}")
+            print(f" '{player_guess.upper()}' is not a letter in the word\n")
+            print(f"{Style.RESET_ALL}")
 
     # Customer error message
     except ValueError as e:
@@ -125,6 +135,7 @@ while not game_over:
             gamearea_display()
             list_blanks[i] = letter
             print(f" {Fore.CYAN}{str(' '.join(list_blanks)).upper()}\n")
+            print(f"{Style.RESET_ALL}")
 
     # Game over condition
     if lives == 0:
@@ -137,8 +148,4 @@ while not game_over:
         game_over = True
         print(f" Congratulations! the word is {random_word.upper()}\n")
         print(f"                {Fore.GREEN}YOU WIN!!{Style.RESET_ALL}")
-
-
-
-
 
