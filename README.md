@@ -25,8 +25,8 @@ Here is the link to the depleyd site [The Hangman Word Game](https://the-hangman
 # Planning Phase
 
 ## User Stories:
-As a user, I want to be able to:
- - I want to know at first visit what the game is.
+As a user:
+ - I want to know at first visit what the site is.
  - I want instructions on how to play the game.
  - I want feedback throughout the game.
  - I want to play the hangman word game
@@ -38,7 +38,12 @@ The application aims to:
   - Provide feedback to players throughout the game.
   - Provide game functionality and enjoyable user experince to play the hangman word game.
 
-## Achieveing Applications goals.
+## Achieveing Applications goals
+ - Provide an ascii art banner for the application with welcome message.
+ - Provide clear instructions to the user.
+ - Provide return messages for invalid input, correct guesses, incorrect guesses, number of lives.
+ - Design & Test the game functionality.
+ - Display ascii art of person hanging as players lives are lost.
 
 
 # User Experience (UX)
