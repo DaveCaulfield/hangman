@@ -25,8 +25,8 @@ def landing_page():
 
     print("\n You get six lives to beat the Hangman.")
     print(" You enter one letter at a time.")
-    print(" You guess correct and the letter will be displayed.")
-    print(" You guess wrong and you lose a life.")
+    print(" You guess correct ...the letter will be displayed in the word.")
+    print(" You guess wrong ...you lose a life.")
 
 
 # Generate random word
@@ -36,8 +36,8 @@ def generate_random_word():
     """
     user_choice = False
     while user_choice is False:
-        print(f"\n press {Fore.CYAN}1 {Style.RESET_ALL}for easier level")
-        print(f" press {Fore.CYAN}2 {Style.RESET_ALL}for harder level")
+        print(f"\n press {Fore.CYAN}1 {Style.RESET_ALL}for easy level")
+        print(f" press {Fore.CYAN}2 {Style.RESET_ALL}for hard level")
 
         level = input(f" Enter your choice {Fore.CYAN}1 or 2\n")
         print(f"{Style.RESET_ALL}")
@@ -72,7 +72,7 @@ for i in range(len(random_word)):
     list_blanks += "_"
 print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}")
 print(hangman_pics[lives])
-print(f"                 {Fore.GREEN}{lives} lives\n")
+print(f"                 {Fore.GREEN}{lives} lives")
 print(f" {Fore.CYAN}{str(' '.join(list_blanks)).upper()}\n")
 print(f"{Style.RESET_ALL}")
 print(f"TESTWORD IS -->> {random_word.upper()}")
@@ -85,7 +85,7 @@ def gamearea_display():
     os.system('clear')
     print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}")
     print(hangman_pics[lives])
-    print(f"                 {Fore.GREEN}{lives} lives\n")
+    print(f"                 {Fore.GREEN}{lives} lives")
 
     # if guess same letter
     if player_guess in list_blanks:
@@ -104,7 +104,7 @@ while not game_over:
     try:
         if len(player_guess) != 1:
             gamearea_display()
-            print(f" {Fore.CYAN}{str(' '.join(list_blanks)).upper()}\n")
+            print(f" {Fore.CYAN}{str(' '.join(list_blanks)).upper()}\n\n")
             raise ValueError(
                 f"only one letter allowed, you entered '{player_guess}'"
             )
@@ -138,6 +138,8 @@ while not game_over:
             gamearea_display()
             list_blanks[i] = letter
             print(f" {Fore.CYAN}{str(' '.join(list_blanks)).upper()}\n")
+            print(f"{Style.RESET_ALL}")
+            print(f" '{player_guess.upper()}' is a letter in the word")
             print(f"{Style.RESET_ALL}")
 
     # Game over condition

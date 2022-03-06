@@ -125,3 +125,11 @@ The Hangman game runs as a python console line web application hosted on the Her
 
 [Back to top](#Overview)
 
+# Testing
+
+## Bugs
+
+# Deployment
+
+# credits
+
