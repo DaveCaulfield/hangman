@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a web application re-creating the old word game Hangman. Players try to discover a word by guessing its letters. Each time a player guesses a correct letter it is displayed on screen. Each time a player guesses a wrong letter they lose a life. The web application is for anyone who would like to play a word puzzle game. The game is a python console line web appliactaion deployed on Heroku.
+This is a web application re-creating the old word game Hangman. Players try to discover a word by guessing its letters. Each time a player guesses a correct letter it is displayed on screen. Each time a player guesses a wrong letter they lose a life. The web application is for anyone who would like to play a word puzzle game. The game is a python console line web appliactaion deployed on [Heroku](https://id.heroku.com/login).
 
 Here is the link to the depleyd site [The Hangman Word Game](https://the-hangman-wordgame.herokuapp.com/)
 
@@ -45,24 +45,26 @@ The application aims to:
  - Design & Test the game functionality.
  - Display ascii art of person hanging as players lives are lost.
 
+[Back to top](#Overview)
+
+# Design
+
+The Design process for the hangman game started with a flow chart to map out the steps involved through out life cycle of the game.
+The flow chart was created using [Lucid Charts](https://www.lucidchart.com/pages/).
+
+![Flow chart](docs/readme-images/hangman-flow-chart.png)
+
 
 # User Experience (UX)
 
 The user experience is designed to be as user friendly and intuitive as possible. Clear instructions and feedback messages are provided to the user and some colour has been added to text. This adds to the user experience withn the constraints of a console line web application.
 
 
-# Design
-
-The Design process for the hangman game started with a flow chart to map out the steps involved through out life cycle of the game.
-
-
-
-![Flow chart](docs/readme-images/hangman-flow-chart.png)
-
-
 # Site Structure
 
 The Hangman game runs as a python console line web application hosted on the Heroku cloud application platform.
+
+[Back to top](#Overview)
 
 # Features
 
@@ -121,4 +123,5 @@ The Hangman game runs as a python console line web application hosted on the Her
 
  ![game win](docs/readme-images/game-win.png)
 
+[Back to top](#Overview)
 

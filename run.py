@@ -66,7 +66,7 @@ for i in range(len(random_word)):
 print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}")
 print(hangman_pics[lives])
 print(f"                 {Fore.GREEN}{lives} lives\n")
-print(f"              {Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n")  # join list blanks for cleaner user experience
+print(f" {Fore.CYAN}{str(' '.join(list_blanks)).upper()}\n")
 # print(f"TESTWORD IS -->> {random_word.upper()}")
 
 
@@ -86,7 +86,7 @@ def gamearea_display():
 # Game on loop
 while not game_over:
 
-    player_guess = input(" Guess a letter:\n").lower()
+    player_guess = input(f"{Fore.CYAN} Guess a letter:\n").lower()
 
     os.system('clear')
 
@@ -94,24 +94,24 @@ while not game_over:
     try:
         if len(player_guess) != 1:
             gamearea_display()
-            print(f"               {Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n")  # join list blanks for cleaner user experience
+            print(f" {Fore.CYAN}{str(' '.join(list_blanks)).upper()}\n")
             raise ValueError(
-                f"{Fore.YELLOW}only one letter allowed, you entered characters '{player_guess}'{Style.RESET_ALL}"
+                f"only one letter allowed, you entered characters '{player_guess}'"
             )
         # guess is not a letter
         elif not player_guess.isalpha():
             gamearea_display()
-            print(f"               {Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n")  # join list blanks for cleaner user experience
+            print(f" {Fore.CYAN}{str(' '.join(list_blanks)).upper()}\n")
             raise ValueError(
-                f"{Fore.YELLOW}only letters allowed, you entered '{player_guess}'{Style.RESET_ALL}"
+                f"{Fore.YELLOW}letter only, you entered '{player_guess}'"
             )
 
         # deduct life
         elif player_guess not in random_word:
             lives -= 1
             gamearea_display()
-            print(f"               {Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n")  # join list blanks for cleaner user experience
-            print(f" {Fore.YELLOW}{player_guess.upper()} is not a letter in the word - you lose a life.{Style.RESET_ALL}\n")
+            print(f" {Fore.CYAN}{str(' '.join(list_blanks)).upper()}\n")
+            print(f" {Fore.YELLOW}Not a letter in the word{Style.RESET_ALL}\n")
 
     # Customer error message
     except ValueError as e:
@@ -124,8 +124,7 @@ while not game_over:
         if letter == player_guess:
             gamearea_display()
             list_blanks[i] = letter
-            print(f"               {Fore.CYAN}{str(' '.join(list_blanks)).upper()}{Style.RESET_ALL}\n")  # join list blanks for cleaner user experience
-            print(f" {player_guess.upper()} is a letter in the word.\n")
+            print(f" {Fore.CYAN}{str(' '.join(list_blanks)).upper()}\n")
 
     # Game over condition
     if lives == 0:
@@ -133,13 +132,12 @@ while not game_over:
         game_over = True
         print(f"{Fore.RED}                GAME OVER{Style.RESET_ALL}")
 
-
     # Game over condition
     if "_" not in list_blanks:
         game_over = True
         print(f" Congratulations! the word is {random_word.upper()}\n")
         print(f"                {Fore.GREEN}YOU WIN!!{Style.RESET_ALL}")
- 
+
 
 
 
