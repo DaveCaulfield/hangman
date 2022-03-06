@@ -1,16 +1,44 @@
 # The Hangman Word Game
 
-This is a web application re-creating the word game Hangman. Players try to discover a word by guessing its letters. Each time a player guesses a correct letter it is revealed on screen. Each time a player guesses a wrong letter they lose a life. The web application is for anyone who would like to play a word puzzle game. The game is a console line web appliactaion built using Python.
+## Overview
 
-[The Hangman Word Game](https://the-hangman-wordgame.herokuapp.com/)
+This is a web application re-creating the old word game Hangman. Players try to discover a word by guessing its letters. Each time a player guesses a correct letter it is displayed on screen. Each time a player guesses a wrong letter they lose a life. The web application is for anyone who would like to play a word puzzle game. The game is a python console line web appliactaion deployed on Heroku.
+
+Here is the link to the depleyd site [The Hangman Word Game](https://the-hangman-wordgame.herokuapp.com/)
 
 
 ![landing page](docs/readme-images/landing-page.png)
 
 
 
-## How to play
+# How to play
+ - The player starts the game by selecting their option of an easier or harder level of the game.
+ - A random word is generated but not revealed for the player to guess.
+ - The word is presented on screen as a series of underscores "_ _ _ _ _" matching the number of letters in the word.
+ - The player is prompted and enters their letter guess into the the terminal.
+ - Invalid input returns a feedback message to the player.
+ - A correct guess will result in the letter being displayed in its position in the list of underscores "_ O _ _ _".
+ - An incorrect guess will result in losing a life and an ascii art image begins to draw the hangman.
+ - The player begins each game with six lives. When all lives are gone the player loses the game.
+ - If the player guesses all the letters in the word the player wins the game.
 
+# Planning Phase
+
+## User Stories:
+As a user, I want to be able to:
+ - I want to know at first visit what the game is.
+ - I want instructions on how to play the game.
+ - I want feedback throughout the game.
+ - I want to play the hangman word game
+
+ ## Applications goals
+The application aims to:
+  - Make clear what the application is.
+  - Provide instructions to play the game.
+  - Provide feedback to players throughout the game.
+  - Provide game functionality and enjoyable user experince to play the hangman word game.
+
+## Achieveing Applications goals.
 
 
 # User Experience (UX)
@@ -68,7 +96,7 @@ The Hangman game runs as a python console line web application hosted on the Her
   - When a correct letter is guessed the letter is displayed in the list of blank underscores.
   - A message is also returned advising that the Letter is in the word
   - When an incorrect letter is guessed the ascii art image to starts to be drawn.
-  - The number of lives displayed is updtaed with the remaining lives left.
+  - The number of lives displayed is updated with the remaining lives left.
   - A message is also returned in orange warning text advising that the Letter is not in the word.
 
  ![game play](docs/readme-images/game-on1.png)
