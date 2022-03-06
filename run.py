@@ -34,29 +34,32 @@ def generate_random_word():
     """
     Generate a random word
     """
-    print(f"\n press {Fore.CYAN}1 {Style.RESET_ALL}for easier level")
-    print(f" press {Fore.CYAN}2 {Style.RESET_ALL}for harder level")
+    user_choice = False
+    while user_choice == False:
+        print(f"\n press {Fore.CYAN}1 {Style.RESET_ALL}for easier level")
+        print(f" press {Fore.CYAN}2 {Style.RESET_ALL}for harder level")
 
-    level = input(f"\n enter your choice {Fore.CYAN}1 or 2\n")
-    print(f"{Style.RESET_ALL}")
-    if level == "1":
-        os.system('clear')
-        random_word = random.choice(wordlist1)
-        return random_word
-    elif level == "2":
-        os.system('clear')
-        random_word = random.choice(wordlist2)
-        return random_word
-
-    else:
-        os.system('clear')
-        landing_page()
-        generate_random_word()
+        level = input(f" Enter your choice {Fore.CYAN}1 or 2\n")
+        print(f"{Style.RESET_ALL}")
+        if level == "1":
+            os.system('clear')
+            random_word = random.choice(wordlist1)
+            return random_word
+            user_choice = True
+        elif level == "2":
+            os.system('clear')
+            random_word = random.choice(wordlist2)
+            return random_word
+            user_choice = True
+        else:
+            os.system('clear')
+            print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}")
+            print(f"{Fore.YELLOW} Oops, you haven't enter a valid choice . . . ")
+            print(f"{Style.RESET_ALL}")
 
 
 def start():
     landing_page()
-    generate_random_word()
 
 start()
 
@@ -120,7 +123,7 @@ while not game_over:
             gamearea_display()
             print(f" {Fore.CYAN}{str(' '.join(list_blanks)).upper()}\n")
             print(f"{Style.RESET_ALL}{Fore.YELLOW}")
-            print(f" '{player_guess.upper()}' is not a letter in the word\n")
+            print(f" '{player_guess.upper()}' is not a letter in the word")
             print(f"{Style.RESET_ALL}")
 
     # Customer error message
