@@ -5,7 +5,7 @@ from ascii_art import hangman_pics
 from ascii_art import hangman_graphic
 from colorama import Fore
 from colorama import Style
-from words import wordlist, wordlist1, wordlist2
+from words import wordlist1, wordlist2
 
 # variables
 
