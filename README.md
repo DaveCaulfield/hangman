@@ -131,5 +131,22 @@ The Hangman game runs as a python console line web application hosted on the Her
 
 # Deployment
 
+ - Log into your Heroku account.
+ - From the home dashboard, click on "New" then "Create new app".
+ - Enter the "App name" and "Choose a region" before clicking on "Create app".
+ - Go to "Config Vars" under the "Settings" tab.
+ - Click on "Reveals Config Vars" and add the KEY: CREDS and the VALUE stored in creds.json file if needed.
+ - Add the Config Var, KEY: PORT and VALUE: 8000.
+ - Go to "Buildpacks" section and click "Add buildpack".
+ - Select "python" and click "Save changes"
+ - Add "nodejs" buildpack as well using the same process.
+ - Go to "Deployment method", under the "Deploy" tab select "GitHub" and click on "Connect to GitHub".
+ - Go to "Connect to GitHub" section and "Search" the repository to be deployed.
+ - Click "Connect" next the repository name.
+- Choose "Automatic deploys" or "Manual deploys" to deploy your application.
+
 # credits
+
+The Hangman wordgame was built as my Portfolio 3 Project for the Full Stack Software Developer (e-Commerce) Diploma at the [Code Institute](https://codeinstitute.net/ie/). I would like to thank my cohort facilitator [Kasia Bogucka](https://github.com/bezebee), my mentor [Precious Leige](https://www.linkedin.com/in/precious-ijege-908a00168/), the Code institue Slack community, Tutors and all at the Code institute for the help and support provided to me throughout this project. 
+
 
