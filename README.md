@@ -38,7 +38,7 @@ The application aims to:
   - Provide feedback to players throughout the game.
   - Provide game functionality and enjoyable user experince to play the hangman word game.
 
-## Achieveing Applications goals
+## Achieving Application goals
  - Provide an ascii art banner for the application with welcome message.
  - Provide clear instructions to the user.
  - Provide return messages for invalid input, correct guesses, incorrect guesses, number of lives.
@@ -55,7 +55,7 @@ The flow chart was created using [Lucid Charts](https://www.lucidchart.com/pages
 ![Flow chart](docs/readme-images/hangman-flow-chart.png)
 
 
-# User Experience (UX)
+# User Experience 
 
 The user experience is designed to be as user friendly and intuitive as possible. Clear instructions and feedback messages are provided to the user and some colour has been added to text. This adds to the user experience withn the constraints of a console line web application.
 
@@ -130,6 +130,9 @@ The Hangman game runs as a python console line web application hosted on the Her
 ## Bugs
 
 # Deployment
+The Hangman web application was deployed using the [Heroku](https://id.heroku.com/login) platform.
+
+The following steps were taken to deploy the site:
 
  - Log into your Heroku account.
  - From the home dashboard, click on "New" then "Create new app".
@@ -147,6 +150,6 @@ The Hangman game runs as a python console line web application hosted on the Her
 
 # credits
 
-The Hangman wordgame was built as my Portfolio 3 Project for the Full Stack Software Developer (e-Commerce) Diploma at the [Code Institute](https://codeinstitute.net/ie/). I would like to thank my cohort facilitator [Kasia Bogucka](https://github.com/bezebee), my mentor [Precious Leige](https://www.linkedin.com/in/precious-ijege-908a00168/), the Code institue Slack community, Tutors and all at the Code institute for the help and support provided to me throughout this project. 
+The Hangman wordgame was built as my Portfolio 3 Project for the Full Stack Software Developer (e-Commerce) Diploma at the [Code Institute](https://codeinstitute.net/ie/). I would like to thank my cohort facilitator [Kasia Bogucka](https://github.com/bezebee), my mentor [Precious Leige](https://www.linkedin.com/in/precious-ijege-908a00168/), the Code institue Slack community and the Code institute taem for the help and support provided to me throughout this project. 
 
 

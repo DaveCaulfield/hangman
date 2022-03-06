@@ -1,14 +1,13 @@
 # Imports
 import random
 import os
-from ascii_art import hangman_pics
-from ascii_art import hangman_graphic
 from colorama import Fore
 from colorama import Style
 from words import wordlist1, wordlist2
+from ascii_art import hangman_pics
+from ascii_art import hangman_graphic
 
 # variables
-
 lives = 6
 game_over = False
 list_blanks = []
@@ -59,12 +58,16 @@ def generate_random_word():
 
 
 def start():
+    """
+    start the game
+    """
     landing_page()
+
 
 start()
 
-
-random_word = generate_random_word()  # call the random word generator
+# call the random word generator
+random_word = generate_random_word()
 
 # Display list of blank letters to be filled
 for i in range(len(random_word)):
@@ -126,7 +129,7 @@ while not game_over:
             print(f" '{player_guess.upper()}' is not a letter in the word")
             print(f"{Style.RESET_ALL}")
 
-    # Customer error message
+    # Custom error message
     except ValueError as e:
         print(f"{Fore.YELLOW} Caution: {e}{Style.RESET_ALL}\n")
 
@@ -153,4 +156,3 @@ while not game_over:
         game_over = True
         print(f" Congratulations! the word is {random_word.upper()}\n")
         print(f"                {Fore.GREEN}YOU WIN!!{Style.RESET_ALL}")
-
