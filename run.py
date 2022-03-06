@@ -35,7 +35,7 @@ def generate_random_word():
     Generate a random word
     """
     user_choice = False
-    while user_choice == False:
+    while user_choice is False:
         print(f"\n press {Fore.CYAN}1 {Style.RESET_ALL}for easier level")
         print(f" press {Fore.CYAN}2 {Style.RESET_ALL}for harder level")
 
@@ -54,7 +54,7 @@ def generate_random_word():
         else:
             os.system('clear')
             print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}")
-            print(f"{Fore.YELLOW} Oops, you haven't enter a valid choice . . . ")
+            print(f"{Fore.YELLOW} Please enter a valid choice . . .")
             print(f"{Style.RESET_ALL}")
 
 
