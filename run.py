@@ -260,6 +260,33 @@ def play():
             game_over = True
             print(f" Congratulations! the word is {random_word.upper()}\n")
             print(f"                {Fore.GREEN}YOU WIN!!{Style.RESET_ALL}")
+            
+            print(f"\n press {Fore.CYAN}1 {Style.RESET_ALL}to play again")
+            print(f" press {Fore.CYAN}2 {Style.RESET_ALL}for homepage")
+            play_again = input(" \n")
+            if play_again == "1":
+                play()
+            elif play_again == "2":
+                start()
+            else:
+                replay = False
+                while replay is False:
+                    print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}")
+                    print(
+                        f"{Fore.RED}                GAME OVER{Style.RESET_ALL}"
+                        )
+                    print(f"{Fore.YELLOW}\n Please enter valid choice . . .")
+                    print(f"{Style.RESET_ALL}")
+                    print(
+                        f" press {Fore.CYAN}1 {Style.RESET_ALL}to play again"
+                        )
+                    print(f" press {Fore.CYAN}2 {Style.RESET_ALL}for homepage")
+                    play_again = input(" \n")
+                    if play_again == "1":
+                        play()
+                    elif play_again == "2":
+                        start()
+
 
 
 def start():
