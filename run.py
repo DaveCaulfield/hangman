@@ -150,11 +150,10 @@ def play():
 
     # Display list of blank letters to be filled
     for i in range(len(random_word)):
-        # print(random_word)
         list_blanks += "_"
     print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}")
     print(hangman_pics[lives])
-    print(f"                 {Fore.GREEN}{lives} lives")
+    print(f"                 {Fore.GREEN}{lives} lives\n")
     print(f" {Fore.CYAN}{str(' '.join(list_blanks)).upper()}\n")
     print(f"{Style.RESET_ALL}")
     print(f"TESTWORD IS -->> {random_word.upper()}")
@@ -173,7 +172,6 @@ def play():
         if player_guess in list_blanks:
             print(f"{Fore.YELLOW}")
             print(f" You already guessed letter '{player_guess.upper()}'\n")
-
 
     # Game on loop
     while not game_over:
@@ -226,9 +224,36 @@ def play():
 
         # Game over condition
         if lives == 0:
-            print(f" You have no lives left ...The word was {random_word.upper()}")
+            print(
+                f" You have no lives left ..The word was {random_word.upper()}"
+                )
             game_over = True
             print(f"{Fore.RED}                GAME OVER{Style.RESET_ALL}")
+            print(f"\n press {Fore.CYAN}1 {Style.RESET_ALL}to play again")
+            print(f" press {Fore.CYAN}2 {Style.RESET_ALL}for homepage")
+            play_again = input(" \n")
+            if play_again == "1":
+                play()
+            elif play_again == "2":
+                start()
+            else:
+                replay = False
+                while replay is False:
+                    print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}")
+                    print(
+                        f"{Fore.RED}                GAME OVER{Style.RESET_ALL}"
+                        )
+                    print(f"{Fore.YELLOW}\n Please enter valid choice . . .")
+                    print(f"{Style.RESET_ALL}")
+                    print(
+                        f" press {Fore.CYAN}1 {Style.RESET_ALL}to play again"
+                        )
+                    print(f" press {Fore.CYAN}2 {Style.RESET_ALL}for homepage")
+                    play_again = input(" \n")
+                    if play_again == "1":
+                        play()
+                    elif play_again == "2":
+                        start()
 
         # Game over condition
         if "_" not in list_blanks:
