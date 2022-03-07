@@ -20,10 +20,33 @@ def landing_page():
     print("           WELCOME TO THE HANGMAN WORD GAME\n")
     print("       Guess all the letters in the word to win.\n")
 
-    print("\n You get six lives to beat the Hangman.")
-    print(" You enter one letter at a time.")
-    print(" You guess correct ...the letter will be displayed in the word.")
-    print(" You guess wrong ...you lose a life.")
+    menu_landing = False
+
+    print(f"\n press {Fore.CYAN}1 {Style.RESET_ALL}to play")
+    print(f" press {Fore.CYAN}2 {Style.RESET_ALL}for instructions")
+    landing_input = input("\n")
+
+    if landing_input == "1":
+        play()
+    elif landing_input == "2":
+        instructions()
+    else:
+        menu_landing = False
+        while menu_landing is False:
+            print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}\n")
+            print("           WELCOME TO THE HANGMAN WORD GAME\n")
+            print("       Guess all the letters in the word to win.\n")
+
+            print(f"{Fore.YELLOW}\n Please enter valid choice . . .")
+            print(f"{Style.RESET_ALL}")
+            print(f" press {Fore.CYAN}1 {Style.RESET_ALL}to play")
+            print(f" press {Fore.CYAN}2 {Style.RESET_ALL}for instructions")
+            landing_input = input("\n")
+
+            if landing_input == "1":
+                play()
+            elif landing_input == "2":
+                instructions()
 
 
 # Generate random word
