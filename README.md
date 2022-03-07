@@ -127,7 +127,7 @@ The Hangman game runs as a python console line web application hosted on the Her
 
 # Technologies used
   - [Python](https://www.python.org/) was used to code the application.
-  - [pep8 Validator](http://pep8online.com/) was used to validate the python3 code.
+  - [pep8 validator](http://pep8online.com/) was used to validate the python3 code.
   - [Gitpod](https://www.gitpod.io/#get-started) was used to create and edit the applications files.
   - [Github](https://github.com/) was used to host the code repository.
   - [Heroku](https://id.heroku.com/login) was used to deploy the application.
