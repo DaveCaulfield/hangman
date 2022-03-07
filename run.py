@@ -62,7 +62,7 @@ def instructions():
     print(" You guess wrong and you lose a life.\n")
 
     print(f" press {Fore.CYAN}1 {Style.RESET_ALL}to play")
-    print(f" press {Fore.CYAN}2 {Style.RESET_ALL}to return to homepage")
+    print(f" press {Fore.CYAN}2 {Style.RESET_ALL}for homepage")
     instruction_choice = input(" ")
 
     if instruction_choice == "1":
