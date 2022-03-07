@@ -49,6 +49,50 @@ def landing_page():
                 instructions()
 
 
+def instructions():
+    """
+    instructions page
+    """
+    print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}")
+    print(f" {Fore.CYAN}Instructions:{Style.RESET_ALL}")
+    print("\n You get six lives to beat the Hangman.")
+    print(" You try to guess all the letters in the word to win.")
+    print(" You guess one letter at a time.")
+    print(" You guess correct and the letter will be displayed.")
+    print(" You guess wrong and you lose a life.\n")
+
+    print(f" press {Fore.CYAN}1 {Style.RESET_ALL}to play")
+    print(f" press {Fore.CYAN}2 {Style.RESET_ALL}to return to homepage")
+    instruction_choice = input(" \n")
+
+    if instruction_choice == "1":
+        play()
+    elif instruction_choice == "2":
+        start()
+    else:
+        instruction = False
+        while instruction is False:
+            print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}")
+            print(f" {Fore.CYAN}Instructions:{Style.RESET_ALL}")
+            print("\n You get six lives to beat the Hangman.")
+            print(" You try to guess all the letters in the word to win.")
+            print(" You guess one letter at a time.")
+            print(" You guess correct and the letter will be displayed.")
+            print(" You guess wrong and you lose a life.\n")
+
+            print(f"{Fore.YELLOW} Please enter a valid choice . . .")
+            print(f"{Style.RESET_ALL}")
+            print(f" press {Fore.CYAN}1 {Style.RESET_ALL}to play")
+            print(f" press {Fore.CYAN}2 {Style.RESET_ALL}to return to homepage")
+            instruction_choice = input(" \n")
+
+            if instruction_choice == "1":
+                play()
+            elif instruction_choice == "2":
+                start()
+
+
+
 # Generate random word
 def generate_random_word():
     """
