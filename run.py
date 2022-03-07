@@ -13,6 +13,7 @@ def landing_page():
     """
     Load landing page
     """
+    os.system('clear')
     print(f"{Fore.CYAN}{landing_graphic}{Style.RESET_ALL}\n")
     print("           WELCOME TO THE HANGMAN WORD GAME\n")
     print("       Guess all the letters in the word to win.\n")
@@ -51,6 +52,7 @@ def instructions():
     """
     instructions page
     """
+    os.system('clear')
     print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}")
     print(f" {Fore.CYAN}Instructions:{Style.RESET_ALL}")
     print("\n You get six lives to beat the Hangman.")
@@ -97,6 +99,7 @@ def play():
     """
     start playing the game
     """
+    os.system('clear')
     lives = 6
     game_over = False
     list_blanks = []
@@ -106,6 +109,7 @@ def play():
         """
         Generate a random word
         """
+        os.system('clear')
         print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}")
         print(hangman_pics[6])
         print("")
@@ -116,10 +120,12 @@ def play():
         print(f"{Style.RESET_ALL}")
 
         if level == "1":
+            os.system('clear')
             random_word = random.choice(wordlist1)
             return random_word
             user_choice = True
         elif level == "2":
+            os.system('clear')
             random_word = random.choice(wordlist2)
             return random_word
             user_choice = True
@@ -140,10 +146,12 @@ def play():
                 level = input(" ")
                 print(f"{Style.RESET_ALL}")
                 if level == "1":
+                    os.system('clear')
                     random_word = random.choice(wordlist1)
                     return random_word
                     user_choice = True
                 elif level == "2":
+                    os.system('clear')
                     random_word = random.choice(wordlist2)
                     return random_word
                     user_choice = True
@@ -296,6 +304,7 @@ def start():
     """
     start the program
     """
+    os.system('clear')
     landing_page()
     # landing_menu()
     play()
