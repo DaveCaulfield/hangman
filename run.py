@@ -30,6 +30,7 @@ def landing_page():
     else:
         menu_landing = False
         while menu_landing is False:
+            os.system('clear')
             print(f"{Fore.CYAN}{landing_graphic}{Style.RESET_ALL}\n")
             print("           WELCOME TO THE HANGMAN WORD GAME\n")
             print("       Guess all the letters in the word to win.\n")
@@ -69,6 +70,7 @@ def instructions():
     else:
         instruction = False
         while instruction is False:
+            os.system('clear')
             print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}")
             print(f" {Fore.CYAN}Instructions:{Style.RESET_ALL}")
             print("\n You get six lives to beat the Hangman.")
@@ -124,6 +126,7 @@ def play():
         else:
             user_choice = False
             while user_choice is False:
+                os.system('clear')
                 print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}")
                 print(hangman_pics[6])
                 print("")
@@ -238,6 +241,7 @@ def play():
             else:
                 replay = False
                 while replay is False:
+                    os.system('clear')
                     print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}")
                     print(
                         f"{Fore.RED}                GAME OVER{Style.RESET_ALL}"
@@ -270,6 +274,7 @@ def play():
             else:
                 replay = False
                 while replay is False:
+                    os.system('clear')
                     print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}")
                     print(
                         f"{Fore.RED}                GAME OVER{Style.RESET_ALL}"
