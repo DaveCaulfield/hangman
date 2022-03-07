@@ -92,43 +92,58 @@ def instructions():
                 start()
 
 def play():
-
-    # variables
+    """
+    start playing the game
+    """
     lives = 6
     game_over = False
     list_blanks = []
-
 
     # Generate random word
     def generate_random_word():
         """
         Generate a random word
         """
-        user_choice = False
-        while user_choice is False:
-            print(f"\n press {Fore.CYAN}1 {Style.RESET_ALL}for easy level")
-            print(f" press {Fore.CYAN}2 {Style.RESET_ALL}for hard level")
+        print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}")
+        print(hangman_pics[6])
+        print("")
+        print(" Let's play Hangman . . select your level\n")
+        print(f"\n press {Fore.CYAN}1 {Style.RESET_ALL}for easy level")
+        print(f" press {Fore.CYAN}2 {Style.RESET_ALL}for hard level")
+        level = input(" \n")
+        print(f"{Style.RESET_ALL}")
 
-            level = input(f" Enter your choice {Fore.CYAN}1 or 2\n")
-            print(f"{Style.RESET_ALL}")
-            if level == "1":
-                os.system('clear')
-                random_word = random.choice(wordlist1)
-                return random_word
-                user_choice = True
-            elif level == "2":
-                os.system('clear')
-                random_word = random.choice(wordlist2)
-                return random_word
-                user_choice = True
-            else:
-                os.system('clear')
+        if level == "1":
+            random_word = random.choice(wordlist1)
+            return random_word
+            user_choice = True
+        elif level == "2":
+            random_word = random.choice(wordlist2)
+            return random_word
+            user_choice = True
+        else:
+            user_choice = False
+            while user_choice is False:
                 print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}")
+                print(hangman_pics[6])
+                print("")
+                print(
+                    " Let's play Hangman . . select your level\n"
+                    )
                 print(f"{Fore.YELLOW} Please enter a valid choice . . .")
                 print(f"{Style.RESET_ALL}")
-
-
-
+                print(f" press {Fore.CYAN}1 {Style.RESET_ALL}for easy level")
+                print(f" press {Fore.CYAN}2 {Style.RESET_ALL}for hard level")
+                level = input(" \n")
+                print(f"{Style.RESET_ALL}")
+                if level == "1":
+                    random_word = random.choice(wordlist1)
+                    return random_word
+                    user_choice = True
+                elif level == "2":
+                    random_word = random.choice(wordlist2)
+                    return random_word
+                    user_choice = True
 
     # call the random word generator
     random_word = generate_random_word()
