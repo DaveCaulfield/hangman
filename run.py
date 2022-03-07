@@ -21,7 +21,7 @@ def landing_page():
 
     print(f"\n press {Fore.CYAN}1 {Style.RESET_ALL}to play")
     print(f" press {Fore.CYAN}2 {Style.RESET_ALL}for instructions")
-    landing_input = input("\n")
+    landing_input = input(" ")
 
     if landing_input == "1":
         play()
@@ -38,7 +38,7 @@ def landing_page():
             print(f"{Style.RESET_ALL}")
             print(f" press {Fore.CYAN}1 {Style.RESET_ALL}to play")
             print(f" press {Fore.CYAN}2 {Style.RESET_ALL}for instructions")
-            landing_input = input("\n")
+            landing_input = input(" ")
 
             if landing_input == "1":
                 play()
@@ -60,7 +60,7 @@ def instructions():
 
     print(f" press {Fore.CYAN}1 {Style.RESET_ALL}to play")
     print(f" press {Fore.CYAN}2 {Style.RESET_ALL}to return to homepage")
-    instruction_choice = input(" \n")
+    instruction_choice = input(" ")
 
     if instruction_choice == "1":
         play()
@@ -83,7 +83,7 @@ def instructions():
             print(
                 f" press {Fore.CYAN}2 {Style.RESET_ALL}to return to homepage"
                 )
-            instruction_choice = input(" \n")
+            instruction_choice = input(" ")
 
             if instruction_choice == "1":
                 play()
@@ -110,7 +110,7 @@ def play():
         print(" Let's play Hangman . . select your level\n")
         print(f"\n press {Fore.CYAN}1 {Style.RESET_ALL}for easy level")
         print(f" press {Fore.CYAN}2 {Style.RESET_ALL}for hard level")
-        level = input(" \n")
+        level = input(" ")
         print(f"{Style.RESET_ALL}")
 
         if level == "1":
@@ -134,7 +134,7 @@ def play():
                 print(f"{Style.RESET_ALL}")
                 print(f" press {Fore.CYAN}1 {Style.RESET_ALL}for easy level")
                 print(f" press {Fore.CYAN}2 {Style.RESET_ALL}for hard level")
-                level = input(" \n")
+                level = input(" ")
                 print(f"{Style.RESET_ALL}")
                 if level == "1":
                     random_word = random.choice(wordlist1)
@@ -230,7 +230,7 @@ def play():
             print(f"\n{Fore.RED}                GAME OVER{Style.RESET_ALL}")
             print(f"\n press {Fore.CYAN}1 {Style.RESET_ALL}to play again")
             print(f" press {Fore.CYAN}2 {Style.RESET_ALL}for homepage")
-            play_again = input(" \n")
+            play_again = input(" ")
             if play_again == "1":
                 play()
             elif play_again == "2":
@@ -242,13 +242,13 @@ def play():
                     print(
                         f"{Fore.RED}                GAME OVER{Style.RESET_ALL}"
                         )
-                    print(f"{Fore.YELLOW}\n Please enter valid choice . . .")
+                    print(f"{Fore.YELLOW}\n Please enter a valid choice . . .")
                     print(f"{Style.RESET_ALL}")
                     print(
                         f" press {Fore.CYAN}1 {Style.RESET_ALL}to play again"
                         )
                     print(f" press {Fore.CYAN}2 {Style.RESET_ALL}for homepage")
-                    play_again = input(" \n")
+                    play_again = input(" ")
                     if play_again == "1":
                         play()
                     elif play_again == "2":
@@ -274,13 +274,13 @@ def play():
                     print(
                         f"{Fore.RED}                GAME OVER{Style.RESET_ALL}"
                         )
-                    print(f"{Fore.YELLOW}\n Please enter valid choice . . .")
+                    print(f"{Fore.YELLOW}\n Please enter a valid choice . . .")
                     print(f"{Style.RESET_ALL}")
                     print(
                         f" press {Fore.CYAN}1 {Style.RESET_ALL}to play again"
                         )
                     print(f" press {Fore.CYAN}2 {Style.RESET_ALL}for homepage")
-                    play_again = input(" \n")
+                    play_again = input(" ")
                     if play_again == "1":
                         play()
                     elif play_again == "2":
