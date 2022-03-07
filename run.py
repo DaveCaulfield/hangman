@@ -5,7 +5,7 @@ from colorama import Fore
 from colorama import Style
 from words import wordlist1, wordlist2
 from ascii_art import hangman_pics
-from ascii_art import hangman_graphic
+from ascii_art import hangman_graphic, landing_graphic
 
 
 # landing page
@@ -13,7 +13,7 @@ def landing_page():
     """
     Load landing page
     """
-    print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}\n")
+    print(f"{Fore.CYAN}{landing_graphic}{Style.RESET_ALL}\n")
     print("           WELCOME TO THE HANGMAN WORD GAME\n")
     print("       Guess all the letters in the word to win.\n")
 
@@ -30,7 +30,7 @@ def landing_page():
     else:
         menu_landing = False
         while menu_landing is False:
-            print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}\n")
+            print(f"{Fore.CYAN}{landing_graphic}{Style.RESET_ALL}\n")
             print("           WELCOME TO THE HANGMAN WORD GAME\n")
             print("       Guess all the letters in the word to win.\n")
 
