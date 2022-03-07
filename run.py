@@ -8,10 +8,7 @@ from ascii_art import hangman_pics
 from ascii_art import hangman_graphic
 
 
-
-
-# landing page 
-
+# landing page
 def landing_page():
     """
     Load landing page
@@ -83,13 +80,16 @@ def instructions():
             print(f"{Fore.YELLOW} Please enter a valid choice . . .")
             print(f"{Style.RESET_ALL}")
             print(f" press {Fore.CYAN}1 {Style.RESET_ALL}to play")
-            print(f" press {Fore.CYAN}2 {Style.RESET_ALL}to return to homepage")
+            print(
+                f" press {Fore.CYAN}2 {Style.RESET_ALL}to return to homepage"
+                )
             instruction_choice = input(" \n")
 
             if instruction_choice == "1":
                 play()
             elif instruction_choice == "2":
                 start()
+
 
 def play():
     """
@@ -157,7 +157,6 @@ def play():
     print(f" {Fore.CYAN}{str(' '.join(list_blanks)).upper()}\n")
     print(f"{Style.RESET_ALL}")
     print(f"TESTWORD IS -->> {random_word.upper()}")
-
 
     def gamearea_display():
         """
@@ -228,7 +227,7 @@ def play():
                 f" You have no lives left ..The word was {random_word.upper()}"
                 )
             game_over = True
-            print(f"{Fore.RED}                GAME OVER{Style.RESET_ALL}")
+            print(f"\n{Fore.RED}                GAME OVER{Style.RESET_ALL}")
             print(f"\n press {Fore.CYAN}1 {Style.RESET_ALL}to play again")
             print(f" press {Fore.CYAN}2 {Style.RESET_ALL}for homepage")
             play_again = input(" \n")
@@ -260,7 +259,7 @@ def play():
             game_over = True
             print(f" Congratulations! the word is {random_word.upper()}\n")
             print(f"                {Fore.GREEN}YOU WIN!!{Style.RESET_ALL}")
-            
+
             print(f"\n press {Fore.CYAN}1 {Style.RESET_ALL}to play again")
             print(f" press {Fore.CYAN}2 {Style.RESET_ALL}for homepage")
             play_again = input(" \n")
@@ -286,7 +285,6 @@ def play():
                         play()
                     elif play_again == "2":
                         start()
-
 
 
 def start():
