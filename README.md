@@ -113,6 +113,7 @@ The Hangman game runs as a python console line web application hosted on the Her
  - If the user runs out of lives before guessing all the correct letters the game is over.
  - A message is returned to the user advising they have no lives left.
  - "Game Over" is displayed in red text.
+ - The user can then easily choose to play again or return to the homepage by selecting from the menu feature.
 
  ![game lose](docs/readme-images/game-over.png)
 
@@ -120,6 +121,8 @@ The Hangman game runs as a python console line web application hosted on the Her
   - If the user guesses all the letters in the word they win.
   - A message is returned to the user advising they have won.
   - "YOU WIN" is displayed in green text
+  - The user can then easily choose to play again or return to the homepage by selecting from the menu feature.
+
 
  ![game win](docs/readme-images/game-win.png)
 
