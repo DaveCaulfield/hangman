@@ -4,7 +4,7 @@
 
 This is a web application re-creating the old word game Hangman. Players try to discover a word by guessing its letters. Each time a player guesses a correct letter it is displayed on screen. Each time a player guesses a wrong letter they lose a life. The web application is for anyone who would like to play a word puzzle game. The game is a python console line web appliactaion deployed on [Heroku](https://id.heroku.com/login).
 
-Here is the link to the depleyd site [The Hangman Word Game](https://the-hangman-wordgame.herokuapp.com/)
+Here is the link to the deployed site [The Hangman Word Game](https://the-hangman-wordgame.herokuapp.com/)
 
 
 ![landing page](docs/readme-images/landing-page.png)
@@ -39,11 +39,11 @@ The application aims to:
   - Provide game functionality and enjoyable user experince to play the hangman word game.
 
 ## Achieving Application goals
- - Provide an ascii art banner for the application with welcome message.
- - Provide clear instructions to the user.
- - Provide return messages for invalid input, correct guesses, incorrect guesses, number of lives.
- - Design & Test the game functionality.
- - Display ascii art of person hanging as players lives are lost.
+ - A large ascii art Hangman banner is diplayed on the landing page with a welcome message.
+ - Instructions are immediately available to the user and the game is explained clearly.
+ - Feedback messages for invalid input, correct guesses, incorrect guesses, number of lives are clear and consitent throughoutthe application.
+ - The game functionality has been succesfully implemented and tested.
+ - An easy and intuitive user experience has been delivered  while re-creating the hangman word game including the hangman graphics.
 
 [Back to top](#Overview)
 
@@ -62,7 +62,12 @@ The user experience is designed to be as user friendly and intuitive as possible
 
 # Site Structure
 
-The Hangman game runs as a python console line web application hosted on the Heroku cloud application platform.
+The Hangman game runs python code in a console line web application hosted on the Heroku cloud application platform.
+
+The code for the application consits of threw python files:
+- run.py for the game funtionality.
+- words.py for the word lists to store and provide the word to be guessed.
+- ascii_art.py for the ascii art images used in the application.
 
 [Back to top](#Overview)
 
@@ -90,8 +95,8 @@ The Hangman game runs as a python console line web application hosted on the Her
 
 ![instructions](docs/readme-images/instructions.png)
 
-## Play game levels
- - When the user chooses to play an option for different game levels is provided.
+## Game levels
+ - When the user chooses to play there is an option for different game levels.
  - The user can press 1 for an easier level.
  - The user can press 2 for an harder level.
 
@@ -100,10 +105,10 @@ The Hangman game runs as a python console line web application hosted on the Her
  ## Game page
  - The game page displays an ascii art feature reprenting the gallows.
  - This is where the image of a person will be drawn as the game progresses.
- - The number of lives is displayed in green under the gallows
+ - The number of lives are displayed in green under the gallows
  - The blanks/underscores displayed in cyan color represent the letters of the word.
  - The correct letters guessed will replace the blank underscores as the user guesses them.
- - The user is prompted to guess a letter providing input to the game.
+ - The user is prompted to guess a letter. This providies input to the game.
 
  ![game page](docs/readme-images/game-page.png)
 
@@ -119,7 +124,7 @@ The Hangman game runs as a python console line web application hosted on the Her
   - When an incorrect letter is guessed the ascii art image to starts to be drawn.
   - The number of lives displayed is updated with the remaining lives left.
   - A message is also returned in orange warning text advising that the Letter is not in the word.
-  - A message in red text advise that the user has lost a life.
+  - A message in red text advises that the user has lost a life.
   - This all combines to give an easy and intuitive user experience.
   - The different colors add to the user experience.
 
@@ -133,7 +138,7 @@ The Hangman game runs as a python console line web application hosted on the Her
 
   ![invalid input](docs/readme-images/invalid-input.png)
 
-  - Example if a user enters non-alpha characters as input then a mesage is returned clearly explainingg what the issue is.
+  - Example if a user enters n  on-alpha characters as input then a mesage is returned clearly explaining what the issue is.
 
   ![invalid input](docs/readme-images/invalid-input-no.png)
 
@@ -148,10 +153,10 @@ The Hangman game runs as a python console line web application hosted on the Her
  ![game lose](docs/readme-images/game-over.png)
 
   ## Game over - win
-  - If the user guesses all the letters in the word they win.
+  - If the user guesses all the letters in the word they win the game.
   - A message is returned to the user advising they have won.
   - "YOU WIN" is displayed in green text
-  - The user can then easily choose to play again or return to the homepage by selecting from the menu feature.
+  - The user can then easily choose to play again or return to the homepage by selecting from the menu options.
 
 
  ![game win](docs/readme-images/game-win.png)

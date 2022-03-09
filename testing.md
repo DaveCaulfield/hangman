@@ -1,8 +1,8 @@
 # TESTING
  - Python code validation was checked.
- - Game functionality was tested to ensure the gameworked as expected.
+ - Game functionality was tested to ensure the game worked as expected.
  - Menu validation and functionality was tested to ensure they worked as expected.
- - User input was tested to ensure it was valid input.
+ - User input was tested to ensure only valid input was accepted.
  - User feedback messages were tested to ensure correct messages were returned to the user.
 
   ## Python Validation
@@ -18,19 +18,19 @@
 
 ## Game functionality
 
- - The game was tested through development to ensure features worked as they were introduced.
- - The games features work as expected eg random word is generated and displayed correctly, letters display correctly, lives deduct accordingly, player wins or player loses all work as expected.
+ - The game was tested throughout development to ensure features worked as they were introduced.
+ - The games features have been found to work as expected eg random word is generated and displayed correctly, letters display correctly, lives deduct accordingly, player wins or player loses all work as expected.
  - The game was tested by friends and family.
  - The game checked by peer code review. 
 
 ## Game input validation
- - User input validataion has been applied in the application.
+ - User input validataion checks have been applied in the code.
  - Input validation was tested and works as expected.
  
- - eg user enters a charcter that is not a letter then feedback message is returned.
+ - eg user enters a charcter that is not a letter then a custom feedback message is returned.
  ![invalid game input](docs/readme-images/input-one.png)
 
-- eg user enters more than one charcter then feedback message is returned.
+- eg user enters more than one charcter then a custom feedback message is returned.
  ![invalid game input](docs/readme-images/input-two.png)
 
 
@@ -50,7 +50,7 @@
 
  ![instructions validation](docs/readme-images/instruction-menu-msg.png)
  
-  - Start Play menu validation:
+  - Play menu validation:
 
  ![start play validation](docs/readme-images/start-play-msg.png)
  
@@ -58,6 +58,8 @@
 
  ![game over validation](docs/readme-images/game-over-msg.png)
  
+[Back to top](#TESTING)
+
 
 # Bugs
 
@@ -65,13 +67,13 @@
 ### PEP8
  - PEP8 warnings were encountered during the development process. 
  - These were minor issues and addressed accordingly. 
- - See python code validation section.
+ - See python validation section.
 
 ### Deployment
 
 - When the application was deployed on the Heroku platform an error message occurred:
 'ModuleNotFoundError: No module named 'colorama' 
-- This was error was researched and the solution was found on slack.
+- This error was researched and the solution was found on slack.
 - Manually adding colorama to the requirements.txt file resolved the issue.
 
 
@@ -82,7 +84,7 @@
  ![bug last letter](docs/readme-images/bug-last-letter.png)
 
  - The code was revisited and the issue was found with the sequence of the new lines of code.
- - Displaying the word to the terminal was incorrectly taking the value of the last iteration of the loop that checks if a letter is in the word.
+ - Displaying the word to the terminal was incorrectly taking the value of the last iteration of the for loop that checks if a letter is in the word.
  - The sequence of the code was adjusted to display the correct list of letters to the terminal. 
 
 ### Code Structure
@@ -95,7 +97,12 @@
 
 ## Unresolved
 - A bug was found when a word contains two of the same letter.
-- if the users guess is a letter that is in the word twice then feedback message for 'you have already picked that letter is returned.'
+- If the users guess is a letter that is in the word twice then the feedback message for 'you have already picked that letter is returned.'
 - This bug has been trouble-shooted but is still outstanding.
 - I have removed the feature from the live site and will contine to investigate.
 - The feature will be added in a future release after my assesment period with Code Institue is complete.
+
+[Back to top](#TESTING)
+
+
+[Back to Readme](#README.MD)
