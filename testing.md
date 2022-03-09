@@ -61,7 +61,19 @@
 
 # Bugs
 
-## Resolved
- - PEP8 warnings were encountered during the development process. These werw minor issues and addtessed accordingly. See python code validation section.
+## Resolved:
+### PEP8
+ - PEP8 warnings were encountered during the development process. 
+ - These were minor issues and addressed accordingly. 
+ - See python code validation section.
+
+### Deployment
+
+- When the application was deployed on the Heroku platform an error message occurred:
+'ModuleNotFoundError: No module named 'colorama' 
+- This was error was researched and the solution was found on slack.
+- Manually adding colorama to the requirements.txt file resolved the issue.
+
+
 
 ## Unresolved
