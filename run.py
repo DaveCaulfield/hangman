@@ -215,7 +215,10 @@ def play():
                 gamearea_display()
                 print(f" {Fore.CYAN}{str(' '.join(list_blanks)).upper()}\n")
                 print(f"{Style.RESET_ALL}{Fore.YELLOW}")
-                print(f" '{player_guess.upper()}' is not a letter in the word")
+                print(
+                    f" '{player_guess.upper()}' is not a letter in the word..."
+                    )
+                print(f"\n {Fore.RED} You lose a life")
                 print(f"{Style.RESET_ALL}")
 
         # Custom error message
@@ -240,7 +243,7 @@ def play():
                 f" You have no lives left ..The word was {random_word.upper()}"
                 )
             game_over = True
-            print(f"\n{Fore.RED}                GAME OVER{Style.RESET_ALL}")
+            print(f"\n{Fore.RED}                  GAME OVER{Style.RESET_ALL}")
             print(f"\n press {Fore.CYAN}1 {Style.RESET_ALL}to play again")
             print(f" press {Fore.CYAN}2 {Style.RESET_ALL}for homepage")
             play_again = input(" ")
@@ -254,7 +257,7 @@ def play():
                     os.system('clear')
                     print(f"{Fore.CYAN}{hangman_graphic}{Style.RESET_ALL}")
                     print(
-                        f"{Fore.RED}                GAME OVER{Style.RESET_ALL}"
+                        f"{Fore.RED}                    GAME OVER"
                         )
                     print(f"{Fore.YELLOW}\n Please enter a valid choice . . .")
                     print(f"{Style.RESET_ALL}")

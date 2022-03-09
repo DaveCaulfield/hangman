@@ -86,15 +86,16 @@ The Hangman game runs as a python console line web application hosted on the Her
 
 ## Instructions
  - The instructions give clear details explaining how to play the game.
+ - The user can then easily choose to play the game or return to the homepage.
 
 ![instructions](docs/readme-images/instructions.png)
 
 ## Game levels
- - An option for different game levels is provided to the user.
+ - When the user chooses to play an option for different game levels is provided.
  - The user can press 1 for an easier level.
  - The user can press 2 for an harder level.
 
- ![game levels](docs/readme-images/levels.png)
+ ![game levels](docs/readme-images/levels-menu.png)
 
  ## Game page
  - The game page displays an ascii art feature reprenting the gallows.
