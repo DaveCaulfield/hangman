@@ -172,7 +172,6 @@ The Hangman game runs as a python console line web application hosted on the Her
 
 Please see the [testing](testing.md) page for details. 
 
-## Bugs
 
 # Deployment
 The Hangman web application was deployed using the [Heroku](https://id.heroku.com/login) platform.
