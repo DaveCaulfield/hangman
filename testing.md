@@ -23,11 +23,23 @@
  - The game was tested by friends and family.
  - The game checked by peer code review. 
 
-## Menu validation
+## Game input validation
+ - User input validataion has been applied in the application.
+ - Input validation was tested and works as expected.
+ 
+ - eg user enters a charcter that is not a letter then feedback message is returned.
+ ![invalid game input](docs/readme-images/input-one.png)
 
- - The navigation menus on the Landing page, Instructions page, start play page, game over page all work as expected.
- - Input validation checks have been applied to the menus resulting in feedback messages being provided back to the user for any invalid input.
- - This ensures easy and intuitive navigation for the user.
+- eg user enters more than one charcter then feedback message is returned.
+ ![invalid game input](docs/readme-images/input-two.png)
+
+
+## Menu input validation
+
+ - The menus on the landing page, instructions page, start play page, game over page all work as expected.
+ - Input validation checks have been applied to the menus.
+ - Feedback messages are returned to the user if they enter invalid input.
+ - This ensures easy and intuitive navigation for the user with conistent styling.
 
 
    - Landing page menu validation:
@@ -46,14 +58,10 @@
 
  ![game over validation](docs/readme-images/game-over-msg.png)
  
-## User input
-
-## User feedback
-
-
 
 # Bugs
 
 ## Resolved
+ - PEP8 warnings were encountered during the development process. These werw minor issues and addtessed accordingly. See python code validation section.
 
 ## Unresolved
