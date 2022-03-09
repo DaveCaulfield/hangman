@@ -228,7 +228,7 @@ def play():
                 gamearea_display()
                 list_blanks[i] = letter
                 print(f" {Fore.CYAN}{str(' '.join(list_blanks)).upper()}\n")
-                print(f"{Style.RESET_ALL}")
+                print(f"{Style.RESET_ALL}{Fore.GREEN}")
                 print(f" '{player_guess.upper()}' is a letter in the word")
                 print(f"{Style.RESET_ALL}")
 
