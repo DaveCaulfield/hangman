@@ -179,9 +179,9 @@ def play():
         print(f"                 {Fore.GREEN}{lives} lives")
 
         # if guess same letter
-        if player_guess in list_blanks:
-            print(f"{Fore.YELLOW}")
-            print(f" You already guessed letter '{player_guess.upper()}'\n")
+        # if player_guess in list_blanks:
+        #     print(f"{Fore.YELLOW}")
+        #     print(f" You already guessed letter '{player_guess.upper()}'\n")
 
     # Game on loop
     while not game_over:
@@ -219,12 +219,12 @@ def play():
         # Custom error message
         except ValueError as e:
             print(f"{Fore.YELLOW} Caution: {e}{Style.RESET_ALL}\n")
-
         # display any correct letter guesses
         for i in range(len(random_word)):
             letter = random_word[i]
             # Correct guesses
             if letter == player_guess:
+                os.system('clear')
                 gamearea_display()
                 list_blanks[i] = letter
                 print(f" {Fore.CYAN}{str(' '.join(list_blanks)).upper()}\n")
