@@ -181,11 +181,6 @@ def play():
         print(hangman_pics[lives])
         print(f"                 {Fore.GREEN}{lives} lives")
 
-        # if guess same letter
-        # if player_guess in list_blanks:
-        #     print(f"{Fore.YELLOW}")
-        #     print(f" You already guessed letter '{player_guess.upper()}'\n")
-
     # Game on loop
     while not game_over:
 
@@ -312,7 +307,6 @@ def start():
     """
     os.system('clear')
     landing_page()
-    # landing_menu()
     play()
 
 

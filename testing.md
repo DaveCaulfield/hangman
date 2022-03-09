@@ -75,5 +75,27 @@
 - Manually adding colorama to the requirements.txt file resolved the issue.
 
 
+### Code
+- A bug was encountered when coding the deduction of lives section of the game.
+- If an incorrect letter was guessed the last letter of the word would also be populated and diplayed.
+
+ ![bug last letter](docs/readme-images/bug-last-letter.png)
+
+ - The code was revisited and the issue was found with the sequence of the new lines of code.
+ - Displaying the word to the terminal was incorrectly taking the value of the last iteration of the loop that checks if a letter is in the word.
+ - The sequence of the code was adjusted to display the correct list of letters to the terminal. 
+
+### Code Structure
+- The control flow of the program had to be reworked when implementing the menu options into the application.
+- Initially coding in the menu options caused issues.
+- The the code was revisited and bettter structure was put in place by making better use of functions.
+- A start function was added to allow better control flow.
+- This resulted in successful implemention of the menu/navigation throughout the site.
+- The code can run between the functions: start, landing page, instructions, play. 
 
 ## Unresolved
+- A bug was found when a word contains two of the same letter.
+- if the users guess is a letter that is in the word twice then feedback message for 'you have already picked that letter is returned.'
+- This bug has been trouble-shooted but is still outstanding.
+- I have removed the feature from the live site and will contine to investigate.
+- The feature will be added in a future release after my assesment period with Code Institue is complete.
