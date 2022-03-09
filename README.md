@@ -68,7 +68,7 @@ The Hangman game runs as a python console line web application hosted on the Her
 
 # Features
 
-## Hangman banner
+## Landing page banner
  - The Hangman banner is displayed at the top of the landing page. 
  - It is an ascii art design in cyan color and welcomes the user. 
  - It immediately lets the user know what the site is and adds to the user experience.
@@ -84,13 +84,13 @@ The Hangman game runs as a python console line web application hosted on the Her
 ![Landing page Menu](docs/readme-images/landing-menu.png)
 
 
-## Instructions
+## Instructions page
  - The instructions give clear details explaining how to play the game.
  - The user can then easily choose to play the game or return to the homepage.
 
 ![instructions](docs/readme-images/instructions.png)
 
-## Game levels
+## Play game levels
  - When the user chooses to play an option for different game levels is provided.
  - The user can press 1 for an easier level.
  - The user can press 2 for an harder level.
@@ -126,6 +126,16 @@ The Hangman game runs as a python console line web application hosted on the Her
    ![lose a life](docs/readme-images/lose-life.png)
 
 
+ ## invalid input
+
+  - If a user enters invalid input a corresponding feedback message is displayed.
+  - Example if a user enters multiple characters as input then a message is returned clearly explaining what the issue is.
+
+  ![invalid input](docs/readme-images/invalid-input.png)
+
+  - Example if a user enters non-alpha characters as input then a mesage is returned clearly explainingg what the issue is.
+
+  ![invalid input](docs/readme-images/invalid-input-no.png)
 
 
  ## Game over - lose
