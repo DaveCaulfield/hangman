@@ -50,6 +50,7 @@ def landing_page():
             elif landing_input == "2":
                 instructions()
 
+
 def instructions():
     """
     instructions page
@@ -218,7 +219,7 @@ def play():
                 print(
                     f" '{player_guess.upper()}' is not a letter in the word..."
                     )
-                print(f"\n {Fore.RED} You lose a life")
+                print(f"\n {Fore.RED}You lose a life")
                 print(f"{Style.RESET_ALL}")
 
         # Custom error message

@@ -105,18 +105,28 @@ The Hangman game runs as a python console line web application hosted on the Her
  - The correct letters guessed will replace the blank underscores as the user guesses them.
  - The user is prompted to guess a letter providing input to the game.
 
-
  ![game page](docs/readme-images/game-page.png)
 
+
  ## Feedback to the user
-  - Feedback is provided when a user guesses a letter.
+  - Feedback is provided when a user inputs a guess.
   - When a correct letter is guessed the letter is displayed in the list of blank underscores.
   - A message is also returned advising that the Letter is in the word
+  
+ ![correct guess](docs/readme-images/correct-guess.png)
+
+
   - When an incorrect letter is guessed the ascii art image to starts to be drawn.
   - The number of lives displayed is updated with the remaining lives left.
   - A message is also returned in orange warning text advising that the Letter is not in the word.
+  - A message in red text advise that the user has lost a life.
+  - This all combines to give an easy and intuitive user experience.
+  - The different colors add to the user experience.
 
- ![game play](docs/readme-images/game-on1.png)
+   ![lose a life](docs/readme-images/lose-life.png)
+
+
+
 
  ## Game over - lose
 
