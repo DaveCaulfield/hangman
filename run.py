@@ -1,4 +1,7 @@
 # Imports
+"""
+Imports
+"""
 import random
 import os
 from colorama import Fore
@@ -46,7 +49,6 @@ def landing_page():
                 play()
             elif landing_input == "2":
                 instructions()
-
 
 def instructions():
     """
@@ -311,4 +313,3 @@ def start():
 
 
 start()
-

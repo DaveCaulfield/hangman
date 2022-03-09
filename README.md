@@ -71,9 +71,18 @@ The Hangman game runs as a python console line web application hosted on the Her
 ## Hangman banner
  - The Hangman banner is displayed at the top of the landing page. 
  - It is an ascii art design in cyan color and welcomes the user. 
- - It immediately conveys the name of the game and adds to the user experience.
+ - It immediately lets the user know what the site is and adds to the user experience.
 
 ![The Hangman banner](docs/readme-images/banner.png)
+
+
+## Landing page menu
+- A welcome message is displayed to the user.
+- A menu introduces the user to the navigation system of the site.
+- The user can choose to play the game or go to the instructions page.
+
+![Landing page Menu](docs/readme-images/landing-menu.png)
+
 
 ## Instructions
  - The instructions give clear details explaining how to play the game.
