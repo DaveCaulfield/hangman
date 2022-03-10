@@ -1,9 +1,5 @@
 # TESTING
- - Python code validation was checked.
- - Game functionality was tested to ensure the game worked as expected.
- - Menu validation and functionality was tested to ensure they worked as expected.
- - User input was tested to ensure only valid input was accepted.
- - User feedback messages were tested to ensure correct messages were returned to the user.
+
 
   ## Python Validation
 
