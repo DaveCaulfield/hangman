@@ -1,3 +1,5 @@
+# ascii art images for game
+
 landing_graphic = """
        _                                 
       | |        THE HANGMAN WORD GAME                                        

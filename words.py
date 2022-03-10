@@ -1,6 +1,4 @@
-
-
-
+# wordlists for game. 
 wordlist1 = [
 'cat',
 'oil', 
