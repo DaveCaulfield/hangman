@@ -101,16 +101,15 @@ Back to [README.md](README.md)
 ### Code Structure
 - The control flow of the program had to be reworked when implementing the menu options into the application.
 - Initially coding in the menu options caused issues.
-- The the code was revisited and bettter structure was put in place by making better use of functions.
-- A start function was added to allow better control flow.
+- The code was revisited and bettter structure was put in place by making better use of functions.
+- A start function was also added to control flow.
 - This resulted in successful implemention of the menu/navigation throughout the site.
-- The code can run between the functions: start, landing page, instructions, play. 
+- The code can now run between the different functions: start, landing page, instructions, play. 
 
 ## Unresolved
 - A bug was found when a word contains two of the same letter.
 - If the users guess is a letter that is in the word twice then the feedback message for 'you have already picked that letter is returned.'
 - This bug has been trouble-shooted but is still outstanding.
-- I have removed the feature from the live site and will contine to investigate.
 - The feature will be added in a future release after my assesment period with Code Institue is complete.
 
 [Back to top](#TESTING)

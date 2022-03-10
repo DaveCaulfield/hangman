@@ -97,8 +97,8 @@ The code for the application consits of threw python files:
 
 ## Game levels
  - When the user chooses to play there is an option for different game levels.
- - The user can press 1 for an easier level.
- - The user can press 2 for an harder level.
+ - The user can press 1 for an easier level - words with six or less letters.
+ - The user can press 2 for an harder level - words with seven or more letters.
 
  ![game levels](docs/readme-images/levels-menu.png)
 
