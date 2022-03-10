@@ -11,6 +11,8 @@
 
 [Back to top](#TESTING)
 
+Back to [README.md](README.md)
+
 
 ## Game functionality
 
@@ -55,6 +57,19 @@
  ![game over validation](docs/readme-images/game-over-msg.png)
  
 [Back to top](#TESTING)
+
+
+
+
+## Browser Compatability
+- The site was tested and found to work successfully using Google Chrome, Microsoft Edge, Mozilla Firefox and Safari web browsers. 
+- Testing checked for:
+    - Rendering/Appearance
+    - Responsiveness
+    - Functionality 
+
+
+Back to [README.md](README.md)
 
 
 # Bugs
