@@ -1,6 +1,6 @@
 # Imports
 """
-Imports
+Import libraries
 """
 import random
 import os

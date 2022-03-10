@@ -221,6 +221,13 @@ Please see the [testing](testing.md) page for details.
  - The colors used in the application came from [Colorama](https://pypi.org/project/colorama/)
  - The wordlists came from [hangmanwords](https://www.hangmanwords.com/words) and [randon word generator](https://www.randomlists.com/random-words)
 
+ ## Resources
+  Resources that were used learning how to develop this hangman applicataion:
+  - [Code Institute](https://codeinstitute.net/ie/) Code Institute Python module for python and OOP concepts.
+  - [W3schools](https://www.python.org/) was referenced to check syntax.
+  - [geeksforgeeks](https://www.geeksforgeeks.org/print-colors-python-terminal/) for bringing color text to the console.
+  - [Net Ninja](https://www.youtube.com/watch?v=Ozrduu2W9B8&list=PL4cUxeGkcC9idu6GZ8EU_5B6WpKTdYZbK) to review concepts.
+  - [Angela Yu Udemy](https://udemy.com) for the hangman idea and tutorials to bring concepts into practice includig a simple version of hangman. 
 
 ## Acknowledgements
 
