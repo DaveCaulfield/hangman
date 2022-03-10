@@ -173,9 +173,17 @@ The code for the application consits of threw python files:
 
 [Back to top](#Overview)
 
-# Testing
 
-Please see the [testing](testing.md) page for details. 
+# Libraries
+
+ - random:
+   - random choice is used to generate a random word from the wordlists.
+
+ - os:
+   - os system clear command is used to clear the console as the user progresses through the game. This provide a cleaner user experience to the player.
+
+ - colorama
+   - colorama is used to bring color to text and ascii art in the console.
 
 
 # Deployment
@@ -199,7 +207,13 @@ The following steps were taken to deploy the site:
 
 [Back to top](#Overview)
 
-# credits
+
+# Testing
+
+Please see the [testing](testing.md) page for details. 
+
+
+# Credits
 
 ## Content
  - The Hangman banner ascii art came from [ascii.co.uk](https://ascii.co.uk/)
