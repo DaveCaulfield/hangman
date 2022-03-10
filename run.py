@@ -170,7 +170,6 @@ def play():
     print(f"                 {Fore.GREEN}{lives} lives\n")
     print(f" {Fore.CYAN}{str(' '.join(list_blanks)).upper()}\n")
     print(f"{Style.RESET_ALL}")
-    print(f"TESTWORD IS -->> {random_word.upper()}")
 
     def gamearea_display():
         """
