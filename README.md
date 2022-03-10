@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a web application re-creating the old word game Hangman. Players try to discover a word by guessing its letters. Each time a player guesses a correct letter it is displayed on screen. Each time a player guesses a wrong letter they lose a life. The web application is for anyone who would like to play a word puzzle game. The game is a python console line web appliactaion deployed on [Heroku](https://id.heroku.com/login).
+This is a web application re-creating the old word game Hangman. Players try to discover a word by guessing its letters. Each time a player guesses a correct letter it is displayed on screen. Each time a player guesses a wrong letter they lose a life. The web application is for anyone who would like to play a word puzzle game. The game is a python console line web applicataion deployed on [Heroku](https://id.heroku.com/login).
 
 Here is the link to the deployed site [The Hangman Word Game](https://the-hangman-wordgame.herokuapp.com/)
 
@@ -18,7 +18,7 @@ Here is the link to the deployed site [The Hangman Word Game](https://the-hangma
  - The player is prompted and enters their letter guess into the the terminal.
  - Invalid input returns a feedback message to the player.
  - A correct guess will result in the letter being displayed in its position in the list of underscores "_ O _ _ _".
- - An incorrect guess will result in losing a life and an ascii art image begins to draw the hangman.
+ - An incorrect guess will result in losing a life and an ascii art image begins to be drawn.
  - The player begins each game with six lives. When all lives are gone the player loses the game.
  - If the player guesses all the letters in the word the player wins the game.
 
@@ -39,9 +39,9 @@ The application aims to:
   - Provide game functionality and enjoyable user experince to play the hangman word game.
 
 ## Achieving Application goals
- - A large ascii art Hangman banner is diplayed on the landing page with a welcome message.
+ - A large ascii art Hangman banner is displayed on the landing page with a welcome message.
  - Instructions are immediately available to the user and the game is explained clearly.
- - Feedback messages for invalid input, correct guesses, incorrect guesses, number of lives are clear and consitent throughoutthe application.
+ - Feedback messages for invalid input, correct guesses, incorrect guesses, number of lives are clear and consitent throughout the application.
  - The game functionality has been succesfully implemented and tested.
  - An easy and intuitive user experience has been delivered  while re-creating the hangman word game including the hangman graphics.
 
@@ -49,7 +49,7 @@ The application aims to:
 
 # Design
 
-The Design process for the hangman game started with a flow chart to map out the steps involved through out life cycle of the game.
+The Design process for the hangman game started with a flow chart to map out the steps involved through out the life cycle of the game.
 The flow chart was created using [Lucid Charts](https://www.lucidchart.com/pages/).
 
 ![Flow chart](docs/readme-images/hangman-flow-chart.png)
@@ -57,7 +57,7 @@ The flow chart was created using [Lucid Charts](https://www.lucidchart.com/pages
 
 # User Experience 
 
-The user experience is designed to be as user friendly and intuitive as possible. Clear instructions and feedback messages are provided to the user and some colour has been added to text. This adds to the user experience withn the constraints of a console line web application.
+The user experience is designed to be as user friendly and intuitive as possible. Clear instructions and feedback messages are provided to the user and colour has been added to the text. This adds to the user experience within the constraints of a console line web application.
 
 
 # Site Structure
@@ -97,18 +97,18 @@ The code for the application consits of threw python files:
 
 ## Game levels
  - When the user chooses to play there is an option for different game levels.
- - The user can press 1 for an easier level - words with six or less letters.
- - The user can press 2 for an harder level - words with seven or more letters.
+ - The user can press 1 for an easier level - words up to six letters in length.
+ - The user can press 2 for a harder level - words with seven letters or more. 
 
  ![game levels](docs/readme-images/levels-menu.png)
 
  ## Game page
  - The game page displays an ascii art feature reprenting the gallows.
  - This is where the image of a person will be drawn as the game progresses.
- - The number of lives are displayed in green under the gallows
+ - The number of lives are displayed & updated in green text under the gallows.
  - The blanks/underscores displayed in cyan color represent the letters of the word.
  - The correct letters guessed will replace the blank underscores as the user guesses them.
- - The user is prompted to guess a letter. This providies input to the game.
+ - The user is prompted to guess a letter. This provides input to the game.
 
  ![game page](docs/readme-images/game-page.png)
 
@@ -134,11 +134,11 @@ The code for the application consits of threw python files:
  ## invalid input
 
   - If a user enters invalid input a corresponding feedback message is displayed.
-  - Example if a user enters multiple characters as input then a message is returned clearly explaining what the issue is.
+  - If a user enters multiple characters as input then a customised message is returned clearly explaining what the issue is.
 
   ![invalid input](docs/readme-images/invalid-input.png)
 
-  - Example if a user enters n  on-alpha characters as input then a mesage is returned clearly explaining what the issue is.
+  - If a user enters non-alpha characters as input then a customised message is returned clearly explaining what the issue is.
 
   ![invalid input](docs/readme-images/invalid-input-no.png)
 
@@ -180,7 +180,7 @@ The code for the application consits of threw python files:
    - random choice is used to generate a random word from the wordlists.
 
  - os:
-   - os system clear command is used to clear the console as the user progresses through the game. This provide a cleaner user experience to the player.
+   - os system clear command is used to clear the console as the user progresses through the game. This provides a cleaner user experience to the player.
 
  - colorama
    - colorama is used to bring color to text and ascii art in the console.
@@ -218,19 +218,19 @@ Please see the [testing](testing.md) page for details.
 ## Content
  - The Hangman banner ascii art came from [ascii.co.uk](https://ascii.co.uk/)
  - The Hangman ascii images came from [Chris Horton](https://gist.github.com/chrishorton/2624db0a0e82102bef769deb46971a47).
- - The colors used in the application came from [Colorama](https://pypi.org/project/colorama/)
+ - The colours used in the application came from [Colorama](https://pypi.org/project/colorama/)
  - The wordlists came from [hangmanwords](https://www.hangmanwords.com/words) and [randon word generator](https://www.randomlists.com/random-words)
 
  ## Resources
-  Resources that were used learning how to develop this hangman applicataion:
+  Resources that were used learning how to develop this hangman application:
   - [Code Institute](https://codeinstitute.net/ie/) Code Institute Python module for python and OOP concepts.
   - [W3schools](https://www.python.org/) was referenced to check syntax.
   - [geeksforgeeks](https://www.geeksforgeeks.org/print-colors-python-terminal/) for bringing color text to the console.
   - [Net Ninja](https://www.youtube.com/watch?v=Ozrduu2W9B8&list=PL4cUxeGkcC9idu6GZ8EU_5B6WpKTdYZbK) to review concepts.
-  - [Angela Yu Udemy](https://udemy.com) for the hangman idea and tutorials to bring concepts into practice includig a simple version of hangman. 
+  - [Angela Yu Udemy](https://udemy.com) for the hangman idea and tutorials to bring concepts into practice including a simple version of hangman. 
 
 ## Acknowledgements
 
-The Hangman wordgame was built as my Portfolio 3 Project for the Full Stack Software Developer (e-Commerce) Diploma at the [Code Institute](https://codeinstitute.net/ie/). I would like to thank my cohort facilitator [Kasia Bogucka](https://github.com/bezebee), my mentor [Precious Leige](https://www.linkedin.com/in/precious-ijege-908a00168/), the Code institue Slack community and the Code institute taem for the help and support provided to me throughout this project. 
+The Hangman word game was built as my Portfolio 3 Project for the Full Stack Software Developer (e-Commerce) Diploma at the [Code Institute](https://codeinstitute.net/ie/). I would like to thank my cohort facilitator [Kasia Bogucka](https://github.com/bezebee), my mentor [Precious Leige](https://www.linkedin.com/in/precious-ijege-908a00168/), the Code institue Slack community and the Code institute team for the help and support provided to me throughout this project. 
 
 [Back to top](#Overview)
