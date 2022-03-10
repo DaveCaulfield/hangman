@@ -21,12 +21,12 @@ def landing_page():
     print("           WELCOME TO THE HANGMAN WORD GAME\n")
     print("       Guess all the letters in the word to win.\n")
 
-    menu_landing = False
-
     print(f"\n press {Fore.CYAN}1 {Style.RESET_ALL}to play")
     print(f" press {Fore.CYAN}2 {Style.RESET_ALL}for instructions")
     landing_input = input(" ")
 
+    # landing page menu
+    menu_landing = False
     if landing_input == "1":
         play()
     elif landing_input == "2":
@@ -68,6 +68,7 @@ def instructions():
     print(f" press {Fore.CYAN}2 {Style.RESET_ALL}for homepage")
     instruction_choice = input(" ")
 
+    # instructions page menu
     if instruction_choice == "1":
         play()
     elif instruction_choice == "2":
@@ -122,6 +123,7 @@ def play():
         level = input(" ")
         print(f"{Style.RESET_ALL}")
 
+        # game levels menu
         if level == "1":
             os.system('clear')
             random_word = random.choice(wordlist1)
@@ -187,7 +189,7 @@ def play():
 
         os.system('clear')
 
-        # validation checks, graphic & feedback template
+        # validation checks, graphic & feedback
         try:
             if len(player_guess) != 1:
                 gamearea_display()
@@ -266,7 +268,7 @@ def play():
                     elif play_again == "2":
                         start()
 
-        # Game over condition
+        # Game over condition win
         if "_" not in list_blanks:
             game_over = True
             print(f" Congratulations! the word is {random_word.upper()}\n")
